@@ -1,13 +1,58 @@
+body {
+  background-color: #e9967a;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #3a4660;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size; 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #3a4660;
+  color: white;
+}
+
 #banner {
   width: 698px;
   height: 200px;
   display: block;
   margin: auto;
+  opacity: 0.8;
+  border-style: inset;
 }
 
 .tagline h1 {
   align-self: center;
   text-align: center;
+  color: #3a4660;
+}
+
+.welcome {
+  font-size: 24px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: black;
+}
+
+.welcomeContainer {
+  background-color: white;
+  opacity: 0.5;
+  margin: auto 30px;
+  border-style: inset;
 }
 
 //*
