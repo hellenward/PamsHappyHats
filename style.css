@@ -1,0 +1,28 @@
+#banner {
+  width: 698px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+.tagline h1 {
+  align-self: center;
+  text-align: center;
+}
+
+//*
+<style type="text/css">
+<!--
+.style3 {font-size: 24px; font-weight: bold; font-style: italic; }
+.style4 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.style6 {font-size: 24px; }
+.style7 {font-size: 36px}
+body {
+	background-image: url(pussbg.jpg);
+	background-repeat: repeat;
+}
+-->
+</style>
