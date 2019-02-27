@@ -1,5 +1,5 @@
 body {
-  background-color: #e9967a;
+  background-color: #FFB6C1;
 }
 
 .topnav {
@@ -53,6 +53,7 @@ body {
   opacity: 0.5;
   margin: auto 30px;
   border-style: inset;
+  max-height: 200px;
 }
 
 //*
