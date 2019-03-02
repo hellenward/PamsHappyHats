@@ -69,7 +69,6 @@ body {
   display: inline-block;
   padding: 10px;
   height: 250px;
-  transition: opacity 2s;
   background-color: white;
   opacity: 0.8;
   border-style: inset;
@@ -94,6 +93,10 @@ body {
 
 .shown {
   opacity: 1;
+}
+
+.fade {
+  transition: opacity 2s;  
 }
 
 
