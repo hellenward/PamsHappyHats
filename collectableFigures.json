@@ -1,0 +1,29 @@
+[
+  {
+    "name": "13th Doctor - Whittaker",
+    "price": "£10.00",
+    "image": "./Thumbs/HH263 D2 12 Whittaker.jpg"
+  },
+  {
+    "name": "Pting Figure",
+    "price": "£10.00",
+    "image": "./Thumbs/HH306 Pting.jpg"
+  },
+  {
+    "name": "12th Doctor - Capaldi",
+    "price": "£10.00",
+    "image": "./Thumbs/HH262 Dr Capaldi.jpg"
+  },
+
+  {
+    "name": "The Valeyard",
+    "price": "£10.00",
+    "image": "./Thumbs/HH298 The Valeyard.jpg"
+  },
+  {
+    "name": "Mollari",
+    "price": "£10.00",
+    "image": "./Thumbs/HH305 Mollari.jpg"
+  }
+  
+]

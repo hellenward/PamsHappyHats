@@ -96,7 +96,11 @@ body {
 }
 
 .fade {
-  transition: opacity 2s;  
+  transition: opacity 2s;
+}
+
+.figure {
+  class: hidden;
 }
 
 
