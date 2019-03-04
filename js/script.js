@@ -64,4 +64,16 @@ $(document).ready(() => {
     showFigures(data);
   }});
 
+  $(".searchButton").on('click', () => {
+    const searchTerm = $(".search").val().toLowerCase();
+    const filteredFigures = figures.filter((figure) => {
+      if(figure.name.toLowerCase().includes(searchTerm)) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+    showFigures(filteredFigures);
+  })
+
 });
