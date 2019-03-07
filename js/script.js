@@ -1,4 +1,6 @@
 const stepTime = 100;
+
+
 const showProducts = (products) => {
   $(".products").empty();
   if(products.length === 0) {
@@ -18,6 +20,7 @@ const showProducts = (products) => {
   });
 }
 
+
 const showFigures = (figures) => {
   $(".figures").empty();
   if(figures.length === 0) {
@@ -36,6 +39,7 @@ const showFigures = (figures) => {
     }, i*stepTime)
   });
 };
+
 
 $(document).ready(() => {
   let hats = [];
