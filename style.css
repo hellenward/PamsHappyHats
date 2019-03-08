@@ -56,6 +56,13 @@ body {
   max-height: 200px;
 }
 
+.commissionContainer {
+  background-color: white;
+  opacity: 0.5;
+  margin: auto 30px;
+  border-style: inset;
+  max-height: 150px;
+}
 
 .products {
   display: flex;
