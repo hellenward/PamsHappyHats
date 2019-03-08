@@ -57,9 +57,7 @@ $(document).ready(() => {
         }
       })
       showProducts(filteredHats);
-
     })
-
   }});
 
   let figures = [];
@@ -79,5 +77,26 @@ $(document).ready(() => {
     })
     showFigures(filteredFigures);
   })
-
 });
+
+//Slideshow for commissions page
+var i = 0;
+var images = []
+var time = 3000;
+
+images[0] = "Thumbs/Commissions/animalblue.jpg";
+images[1] = "Thumbs/Commissions/blue octo.jpg";
+images[3] = "Thumbs/Commissions/Facehugger2.jpg";
+images[4] = "Thumbs/Commissions/Dog Hat Rasta.jpg";
+images[5] = "Thumbs/Commissions/Pink Dalek.jpg";
+
+function changeImg() {
+  document.slide.src = images [];
+  if(i < images.length-1) {
+    i++
+  } else {
+    i = 0;
+  }
+
+  setTimeOut("changeImg()", time)
+}
