@@ -58,7 +58,6 @@ body {
 
 .commissionContainer {
   background-color: white;
-  opacity: 0.5;
   margin: auto 30px;
   border-style: inset;
   max-height: 150px;
@@ -106,7 +105,7 @@ body {
 .carouselbox {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
-  width: 100px;
+  width: 400px;
   position: relative;
   margin-top: 80px;
   border: 1px solid #ccc;
@@ -117,32 +116,41 @@ body {
 .content {
   margin: 0;
   padding: 0;
+  width: 1300px;
+  overflow: hidden;
+  position: relative;
 }
+
+.transitioning {
+  transition: margin-left 2s;
+}
+
 
 .content li {
   font-size: 100px;
+  display: inline-block;
   margin: 0;
   padding: 0;
-  width: 100%;
   list-style: none;
   text-align: center;
+  width: 400px;
 }
 
-.active {
+.carouselbox .active {
   height: 130px;
   color: blue;
 }
 
-.active li {
+.carouselbox .active li {
   position: absolute;
   top: 200px;
 }
 
-.active li.current {
+.carouselbox .active li.current {
   top: 30px;
 }
 
-.active .buttons {
+.carouselbox .active .buttons {
   padding: 5px 0;
   background: #eee;
   text-align: center;
@@ -155,7 +163,7 @@ body {
   display: none;
 }
 
-.active .button {
+.carouselbox .active .button {
   display: block;
 }
 

@@ -40,6 +40,27 @@ const showFigures = (figures) => {
   });
 };
 
+const runCarousel = () => {
+  const content = $(".carouselbox .content");
+  setInterval(()=> {
+    content.addClass("transitioning");
+    content.css("margin-left", "-400px");
+    setTimeout(() => {
+      const firstImage = content.find("li").first();
+      const secondImage = firstImage.next();
+      const lastImage = secondImage.next();
+      const firstImageSource = firstImage.find("img").attr("src");
+      const secondImageSource = secondImage.find("img").attr("src");
+      const lastImageSource = lastImage.find("img").attr("src");
+      firstImage.find("img").attr("src", secondImageSource);
+      secondImage.find("img").attr("src", lastImageSource);
+      lastImage.find("img").attr("src", firstImageSource);
+      content.removeClass("transitioning");
+      content.css("margin-left", "0px");
+    }, 2000)
+  }, 4000);
+}
+
 
 $(document).ready(() => {
   let hats = [];
@@ -78,32 +99,6 @@ $(document).ready(() => {
     showFigures(filteredFigures);
   });
 
-});
+  runCarousel();
 
-const carousel = () => {
-  var box = document.querySelector('.carouselbox');
-  var next = box.querySelector('.next');
-  var prev = box.querySelector('.prev');
-  var items = box.querySelector('.content li');
-  var counter = 0;
-  var amount = items.length;
-  var current = items[0];
-  box.classList.add('active');
-  function navigate(direction) {
-    current.classList.remove('current');
-    counter = counter + direction;
-    if (direction === -1 && counter < 0) {
-      counter = amount -1;
-    }
-    if (direction === 1 && !items[counter]) {
-      counter = 0;
-    }
-    next.addEventListener('click', function(ev) {
-      navigate(1);
-    });
-    prev.addEventListener('click', function(ev) {
-      navigate(-1);
-    });
-    navigate(0);
-  }
-})();
+});
