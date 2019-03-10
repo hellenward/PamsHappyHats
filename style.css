@@ -102,6 +102,11 @@ body {
   justify-content: center;
 }
 
+.carouselContainer {
+  width: 100%;
+  background-color: silver;
+}
+
 .carouselbox {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
@@ -111,6 +116,10 @@ body {
   border: 1px solid #ccc;
   box-shadow: 2px 3px 10px #ccc;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  opacity: 0.8;
 }
 
 .content {
