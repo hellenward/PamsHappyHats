@@ -61,7 +61,6 @@ body {
   background-color: white;
   margin: auto 30px;
   border-style: inset;
-  max-height: 150px;
 }
 
 .products {
@@ -103,85 +102,39 @@ body {
   justify-content: center;
 }
 
-.carouselContainer {
+/*Commissions carouselbox*/
+
+.commissions {
+  width: 400px;
+  height: 440px;
+  overflow: hidden;
+  padding-top: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.commission {
+  position: absolute;
   width: 100%;
-  background-color: silver;
-  border-radius: 45px;
-}
-
-.carouselbox {
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  width: 400px;
-  position: relative;
-  margin-top: 80px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 3px 10px #ccc;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: silver;
-  opacity: 0.8;
-}
-
-.content {
-  margin: 0;
-  padding: 0;
-  width: 1300px;
-  overflow: hidden;
-  position: relative;
-}
-
-.transitioning {
-  transition: margin-left 2s;
-}
-
-
-.content li {
-  font-size: 100px;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s;
   text-align: center;
-  width: 400px;
 }
 
-.carouselbox .active {
-  height: 130px;
-  color: blue;
+.commissionHide {
+  transform: translateX(100%);
 }
 
-.carouselbox .active li {
-  position: absolute;
-  top: 200px;
-}
-
-.carouselbox .active li.current {
-  top: 30px;
-}
-
-.carouselbox .active .buttons {
-  padding: 5px 0;
-  background: #eee;
+.commission h4 {
   text-align: center;
-  z-index: 10;
-  position: relative;
 }
 
-.carouselbox .button {
-  border: none;
-  display: none;
+.commission img {
+  margin: 0 auto;
 }
 
-.carouselbox .active .button {
-  display: block;
-}
 
-.offscreen {
-  position: absolute;
-  left: -2000px;
-}
 
 
 
@@ -317,6 +270,86 @@ form {
 body {
 	background-image: url(pussbg.jpg);
 	background-repeat: repeat;
+}
+
+.carouselContainer {
+  width: 100%;
+  background-color: silver;
+  border-radius: 45px;
+}
+
+.carouselbox {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  width: 400px;
+  position: relative;
+  margin-top: 80px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 3px 10px #ccc;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: silver;
+  opacity: 0.8;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  width: 1300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.transitioning {
+  transition: margin-left 2s;
+}
+
+
+.content li {
+  font-size: 100px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 400px;
+}
+
+.carouselbox .active {
+  height: 130px;
+  color: blue;
+}
+
+.carouselbox .active li {
+  position: absolute;
+  top: 200px;
+}
+
+.carouselbox .active li.current {
+  top: 30px;
+}
+
+.carouselbox .active .buttons {
+  padding: 5px 0;
+  background: #eee;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.carouselbox .button {
+  border: none;
+  display: none;
+}
+
+.carouselbox .active .button {
+  display: block;
+}
+
+.offscreen {
+  position: absolute;
+  left: -2000px;
 }
 -->
 </style>

@@ -1,5 +1,6 @@
 const stepTime = 100;
-
+let commissionsArray;
+let commissionIndex = 1;
 
 const showProducts = (products) => {
   $(".products").empty();
@@ -40,6 +41,39 @@ const showFigures = (figures) => {
   });
 };
 
+const showCommissions = (commissions) => {
+  $(".commissions").empty();
+  if(commissions.length === 0) {
+    $(".figures").append(`<div class="hidden fade">Sorry, nothing matches your search</div>`);
+  }
+  commissions.forEach((commission) => {
+    $(".commissions").append(`<div class="commission commissionHide">
+    <img src="${commission.image}">
+    <h4>${commission.name}</h4>
+    <h4>${commission.price}</h4>
+  </div>`);
+  });
+  let container = document.querySelector(".commissions");
+  commissionsArray = container.querySelectorAll(".commission");
+  commissionsArray[0].classList.remove("commissionHide");
+  setInterval(() => {
+    commissionsArray[commissionIndex].classList.remove("commissionHide");
+    let lastSlide = commissionIndex-1;
+    if (commissionIndex === 0) {
+      lastSlide = commissionsArray.length-1;
+    }
+    commissionsArray[lastSlide].classList.add("commissionHide");
+    commissionIndex++;
+    if (commissionIndex === commissionsArray.length) {
+      commissionIndex = 0;
+    }
+  }, 3000);
+
+};
+
+
+
+/*
 const runCarousel = () => {
   const content = $(".carouselbox .content");
   setInterval(()=> {
@@ -60,7 +94,7 @@ const runCarousel = () => {
     }, 2000)
   }, 4000);
 }
-
+*/
 
 $(document).ready(() => {
   let hats = [];
@@ -99,6 +133,10 @@ $(document).ready(() => {
     showFigures(filteredFigures);
   });
 
-  runCarousel();
-
+  let commissions = [];
+  $.ajax({url: "./commissions.json", dataType: "json", success: (data) => {
+    commissions = data;
+    console.log(commissions);
+    showCommissions(data);
+  }});
 });
