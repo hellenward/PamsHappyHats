@@ -1,7 +1,8 @@
-const stepTime = 100;
-let commissionsArray;
-let commissionIndex = 1;
+const stepTime = 100; //Global variable for fade in on hats and figures pages
+let commissionsArray;  //Global variable for carouselbox
+let commissionIndex = 1; //Global variable for carouselbox
 
+//Function to show products on hats page, includes scenario where we're using the search box
 const showProducts = (products) => {
   $(".products").empty();
   if(products.length === 0) {
@@ -21,7 +22,7 @@ const showProducts = (products) => {
   });
 }
 
-
+//Function to show figures on figures page, includes scenario where we're using the search box
 const showFigures = (figures) => {
   $(".figures").empty();
   if(figures.length === 0) {
@@ -41,6 +42,7 @@ const showFigures = (figures) => {
   });
 };
 
+//Function to get commissions from the commissions json library and be able to use search box
 const showCommissions = (commissions) => {
   $(".commissions").empty();
   if(commissions.length === 0) {
@@ -53,6 +55,8 @@ const showCommissions = (commissions) => {
     <h4>${commission.price}</h4>
   </div>`);
   });
+
+  //Code for carouselbox / slideshow
   let container = document.querySelector(".commissions");
   commissionsArray = container.querySelectorAll(".commission");
   commissionsArray[0].classList.remove("commissionHide");
