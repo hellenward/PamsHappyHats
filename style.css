@@ -150,10 +150,17 @@ body {
   transition: opacity 2s;
 }
 
+/*Contact Page*/
+.contactAndEventsContainer {
+  display: flex;
+  margin-top: 50px;
+}
+
 /*contact Form */
 
 .contactFormOverallContainer {
   width: 600px;
+  height:
 }
 
 .contactLegendContainer {
@@ -187,11 +194,12 @@ body {
   padding: 5px;
   margin-bottom: 10px;
   width: 493px;
+  height: 200px;
 }
 
 .fiddlyText {
   position:relative;
-  bottom: 80px;
+  bottom: 195px;
 }
 
 .contactSubmitButton {
@@ -202,6 +210,71 @@ body {
   border-radius: 6px;
 }
 
+/*Events section*/
+
+.eventContainer {
+  width: 600px;
+  border-width: 2px;
+  border-color: threedface;
+  border-style: groove;
+  padding: 8px;
+  margin-left: 50px;
+}
+
+.event1 {
+  background-color: #FFFFFF;
+}
+
+.event2 {
+  background-color: #DCDCDC;
+}
+
+.event img {
+  height: 50px;
+  width: 50px;
+  margin: 10px auto auto 20px;
+  position: absolute;
+}
+
+.eventTitle {
+  text-align: center;
+  font-size: 20px;
+  background-color: white;
+  opacity: 0.6;
+  padding: 10px;
+  margin: auto auto 10px auto;
+}
+
+.event p {
+  margin: auto auto 0px 100px;
+  padding: 0px 0px 10px 0px;
+}
+
+.event a {
+  position: relative;
+  left: 100px;
+  top: 5px;
+  font-size: 16px;
+  vertical-align: top;
+  color: #8B8378;
+}
+
+.date {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #696969;
+  position: relative;
+  top: 5px;
+}
+
+.venue {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #696969;
+  vertical-align: top;
+  position: relative;
+  bottom: 5px;
+}
 
 //*
 <style type="text/css">
