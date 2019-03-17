@@ -22,6 +22,26 @@ const showProducts = (products) => {
   });
 }
 
+const showEvents = (events) => {
+  $(".events").empty();
+  if(events.length === 0) {
+    $(".events").append(('div class="hidden fade">Sorry, there are no upcoming events. Check back later!</div>'));
+  }
+  events.forEach((event, index) => {
+    $(".events").append(`  <div class="event ${index%2 === 0 ? "event1" : "event2"}">
+        <img src="${event.image}">
+        <a href="${event.url}">${event.name}</a>
+        <p class="date">${event.startDate} - ${event.endDate}</p>
+        <p class="venue">${event.address}</p>
+      </div>`);
+  });
+  $(".fade").each((i, event) => {
+    setTimeout(() => {
+      $(event).removeClass("hidden").addClass("shown");
+    }, i*stepTime)
+  });
+}
+
 //Function to show figures on figures page, includes scenario where we're using the search box
 const showFigures = (figures) => {
   $(".figures").empty();
@@ -76,71 +96,62 @@ const showCommissions = (commissions) => {
 };
 
 
-
-/*
-const runCarousel = () => {
-  const content = $(".carouselbox .content");
-  setInterval(()=> {
-    content.addClass("transitioning");
-    content.css("margin-left", "-400px");
-    setTimeout(() => {
-      const firstImage = content.find("li").first();
-      const secondImage = firstImage.next();
-      const lastImage = secondImage.next();
-      const firstImageSource = firstImage.find("img").attr("src");
-      const secondImageSource = secondImage.find("img").attr("src");
-      const lastImageSource = lastImage.find("img").attr("src");
-      firstImage.find("img").attr("src", secondImageSource);
-      secondImage.find("img").attr("src", lastImageSource);
-      lastImage.find("img").attr("src", firstImageSource);
-      content.removeClass("transitioning");
-      content.css("margin-left", "0px");
-    }, 2000)
-  }, 4000);
-}
-*/
-
 $(document).ready(() => {
-  let hats = [];
-  $.ajax({url: "./hats.json", dataType: "json", success: (data) => {
-    hats = data;
-    showProducts(data);
+  const currentPage = $("body").attr("class");
+  if (currentPage === "hatsPage") {
+    let hats = [];
+    $.ajax({url: "./hats.json", dataType: "json", success: (data) => {
+      hats = data;
+      showProducts(data);
+
+      $(".searchButton").on('click', () => {
+        const searchTerm = $(".search").val().toLowerCase();
+        const filteredHats = hats.filter((hat) => {
+          if(hat.name.toLowerCase().includes(searchTerm)) {
+            return true;
+          } else {
+            return false;
+          }
+        })
+        showProducts(filteredHats);
+      })
+    }});
+  }
+
+  if (currentPage === "collectableFiguresPage") {
+    let figures = [];
+    $.ajax({url: "./collectableFigures.json", dataType: "json", success: (data) => {
+      figures = data;
+      showFigures(data);
+    }});
 
     $(".searchButton").on('click', () => {
       const searchTerm = $(".search").val().toLowerCase();
-      const filteredHats = hats.filter((hat) => {
-        if(hat.name.toLowerCase().includes(searchTerm)) {
+      const filteredFigures = figures.filter((figure) => {
+        if(figure.name.toLowerCase().includes(searchTerm)) {
           return true;
         } else {
           return false;
         }
       })
-      showProducts(filteredHats);
-    })
-  }});
+      showFigures(filteredFigures);
+    });
+  }
 
-  let figures = [];
-  $.ajax({url: "./collectableFigures.json", dataType: "json", success: (data) => {
-    figures = data;
-    showFigures(data);
-  }});
+  if (currentPage === "commissionsPage") {
+    let commissions = [];
+    $.ajax({url: "./commissions.json", dataType: "json", success: (data) => {
+      commissions = data;
+      showCommissions(data);
+    }});
+  }
 
-  $(".searchButton").on('click', () => {
-    const searchTerm = $(".search").val().toLowerCase();
-    const filteredFigures = figures.filter((figure) => {
-      if(figure.name.toLowerCase().includes(searchTerm)) {
-        return true;
-      } else {
-        return false;
-      }
-    })
-    showFigures(filteredFigures);
-  });
-
-  let commissions = [];
-  $.ajax({url: "./commissions.json", dataType: "json", success: (data) => {
-    commissions = data;
-    console.log(commissions);
-    showCommissions(data);
-  }});
+  if (currentPage === "contactPage") {
+    let events = [];
+    $.ajax({url: "./events.json", dataType: "json", success: (data) => {
+      events = data;
+      console.log(events);
+      showEvents(data);
+    }});
+  }
 });

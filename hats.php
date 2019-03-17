@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
-<body>
+<body class="hatsPage">
   <?php include("menu.php")?>
 
   <div class="banner"> <!---banner--->

@@ -7,9 +7,10 @@
     <title>Happy Hats Home Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <
   </head>
 
-  <body>
+  <body class="contactPage">
     <?php include("menu.php")?>
 
     <div class="banner"> <!---banner--->
@@ -48,6 +49,13 @@
           </fieldset>
         </form>
 
+        <div  class="eventContainer">
+          <div class="eventTitle">Upcoming Events</div>
+          <div class="events"></div>
+        </div>
+
+
+<?php /*
         <div class="eventContainer">
           <legend class="eventTitle">Upcoming Events</legend>
           <div class="event event1">
@@ -74,9 +82,9 @@
             <p class="date">28th April 2019</p>
             <p class="venue">Abingdon & Whitney College, Abingdon Campus, Wootton Road, Abingdon OX14 1GG</p>
           </div>
-      </div>
+      </div> */ ?>
     </div >
-
+    <script src="./js/script.js"></script>
   </body>
 
 </html>

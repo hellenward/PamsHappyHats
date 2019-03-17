@@ -8,7 +8,7 @@
 			<link rel="stylesheet" type="text/css" href="./style.css">
 		</head>
 
-		<body>
+		<body class="commissionsPage">
 			<?php include("menu.php")?>
 
 				<div class="banner"> <!---banner--->

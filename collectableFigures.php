@@ -6,7 +6,7 @@
     <title>Happy Hats Home Page</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-  <body>
+  <body class="collectableFiguresPage">
     <?php include("menu.php")?>
 
     <div class="banner"> <!---banner--->
