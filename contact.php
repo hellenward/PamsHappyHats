@@ -1,3 +1,5 @@
+<?php $page = "contact";?>
+<?php include("contactHandler.php")?>
 <!DOCTYPE = html>
 <html>
   <head>
@@ -8,26 +10,22 @@
   </head>
 
   <body>
-    <div class="topnav">
-      <a href="./index.html">Home</a>
-      <a href="./hats.html">Hats</a>
-      <a href="./collectableFigures.html">Collectible Figures</a>
-      <a href="./commissions.html">Commissions</a>
-      <a class="active" href="./contact.html">Contact</a>
-      <a href="./gallery.html">Gallery</a>
-    </div>
+    <?php include("menu.php")?>
 
     <div class="banner"> <!---banner--->
       <img src="./Buttons/aabanner2.jpg" id="banner">
     </div>
-
-    <p class="welcomeContainer welcome">Use the form below to get in touch with us with
-      us or alternatively come and find us at any of the upcoming events listed
-      below.</p>
+    <?php if($emailed === true) {?>
+      <p class="welcomeContainer welcome">Thank you for your message!  We'll get back to you as soon as possible.</p>
+    <?php } else { ?>
+      <p class="welcomeContainer welcome">Use the form below to get in touch with us with
+        us or alternatively come and find us at any of the upcoming events listed
+        below.</p>
+   <?php } ?>
 
     <div class="contactAndEventsContainer">
 
-      <form>
+      <form method="post">
           <fieldset class="contactFormOverallContainer">
             <div class="contactLegendContainer">
               <legend class="contactLegend">Contact us</legend>
@@ -65,7 +63,7 @@
             <p class="venue">Allum Manor House & Hall, 2 Allum Lane, Borehamwood WD6 3PJ</p>
           </div>
           <div class="event event1">
-            <img src="ContactGraphics/BedfordWho.jpeg">
+            <img src="ContactGraphics/BedfordWho.jpg">
             <a href="http://bedfordwhocharitycon.co.uk/">Bedford Who</a>
             <p class="date">13th April 2019</p>
             <p class="venue">The Theatre, University of Bedfordshire, Polhil Avenue, Bedford MK41 9EA</p>

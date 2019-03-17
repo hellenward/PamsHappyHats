@@ -1,3 +1,4 @@
+<?php $page = "collectableFigures";?>
 <!DOCTYPE = html>
 <html>
   <head>
@@ -6,14 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <div class="topnav">
-      <a href="./index.html">Home</a>
-      <a href="./hats.html">Hats</a>
-      <a class="active" href="./collectableFigures.html">Collectible Figures</a>
-      <a href="./commissions.html">Commissions</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./gallery.html">Gallery</a>
-    </div>
+    <?php include("menu.php")?>
 
     <div class="banner"> <!---banner--->
       <img src="./Buttons/aabanner2.jpg" id="banner">

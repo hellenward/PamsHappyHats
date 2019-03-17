@@ -1,3 +1,4 @@
+<?php $page = "index";?>
 <!DOCTYPE html>
 	<html>
 
@@ -8,15 +9,7 @@
 		</head>
 
 		<body>
-			<div class="topnav">
-		    <a class="active" 	href="./index.html">Home</a>
-		    <a href="./hats.html">Hats</a>
-		    <a href="./collectableFigures.html">Collectible Figures</a>
-		    <a href="./commissions.html">Commissions</a>
-		    <a href="./contact.html">Contact</a>
-		    <a href="./gallery.html">Gallery</a>
-			</div>
-
+			<?php include("menu.php")?>
 				<div class="banner"> <!---banner--->
 					<img src="./Buttons/aabanner2.jpg" id="banner">
 				</div>
