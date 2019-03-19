@@ -154,4 +154,33 @@ $(document).ready(() => {
       showEvents(data);
     }});
   }
+
+  if (currentPage === "adminForm") {
+    let selection = document.querySelector(".adminList");
+    selection.onchange = () => {
+      if (selection.value === "hat") {
+        let elements = document.querySelectorAll(".adminHat");
+        elements.forEach((element) => {
+          element.classList.remove("hidden");
+        });
+      }
+    }
+    let name = "Tigger";
+    let pricingTier = document.querySelector(".pricingTier");
+    pricingTier.onchange = () => {
+      if (pricingTier.value === "bronze") {
+        let newHat = {
+          Name: name,
+          Premie: "£7.00",
+          Newborn: "£8.00",
+          ExtraSmall: "£9.00",
+          Small: "£10.00",
+          Medium: "£11.00",
+          Large: "12.00",
+          ExtraLarge: "£13.00"
+        }
+        console.log(newHat);
+      }
+    }
+  }
 });
