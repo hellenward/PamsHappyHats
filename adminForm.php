@@ -37,33 +37,22 @@
           <label>Image</label>
           <input type="file" name="pic" accept="image/*">
         </div>
-        <div class="adminHat">
-          <label>Price - Newborn</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
+        <div class="adminHat adminCommission">
+          <label>Pricing Tier</label>
+            <select>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+              <option value="platinum">Platinum</option>
+            </select>
         </div>
-        <div class="adminHat">
-          <label>Price - X Small</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
-        </div>
-        <div class="adminHat">
-          <label>Price - Small</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
-        </div>
-        <div class="adminHat">
-          <label>Price - Medium</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
-        </div>
-        <div class="adminHat">
-          <label>Price - Large</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
-        </div>
-        <div class="adminHat">
-          <label>Price - X Large</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
-        </div>
-        <div class="adminCommission">
-          <label>Price</label>
-          <input class="" name="priceNB" type="text" placeholder="Please include £">
+        <div class="platinumPricing">
+          <p>Please insert pricing for Platinum</p>
+          <label>P</label><input type="text"></input>
+          <label>NB</label><input type="text"></input>
+          <label>XS</label><input type="text"></input>
+          <label>S</label><input type="text"></input>
+          <label>M</label><input type="text"></input>
         </div>
         <div class="adminCommission">
           <label>Do you want to include this on Hats page?</label>
@@ -93,7 +82,26 @@
             <option value="no">No</option>
           </select>
         </div>
-
+        <div class="adminFigures">
+          <label>Please confirm price of Figure</label>
+          <input type="text"></input>
+        </div>
+        <div class="adminEvent">
+          <label>Please enter event URL</label>
+          <input type="text"></input>
+        </div>
+        <div class="adminEvent">
+          <label>Please enter date of event</label>
+          <input class="startDate" type="date" placeholder="Start Date"></input>
+          <input class="endDate" type="date" placeholder="End Date"></input>
+        </div>
+        <div class="adminEvent">
+          <label>Please enter event address</label>
+          <input type="text"></input>
+        </div>
+        <div>
+          <button class="contactSubmitButton" type="submit">Submit</button>
+        </div>
         </fieldset>
       </form>
 
