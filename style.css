@@ -1,10 +1,17 @@
 body {
-  background-color: #FFB6C1;
+  background-image: url("/Thumbs/yarn.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: hard-light;
   font-family: Helvetica, sans-serif;
 }
 
 .topnav {
   overflow: hidden;
+  background-color: #cccccc;
+  width: 50%;
 }
 
 .topnav a {
@@ -31,7 +38,7 @@ body {
   height: 200px;
   display: block;
   margin: 30px auto;
-  opacity: 0.8;
+  opacity: 0.9;
   border-style: inset;
 }
 
@@ -39,6 +46,9 @@ body {
   align-self: center;
   text-align: center;
   color: #3a4660;
+  background-color: #cccccc;
+  width: 70%;
+  margin: auto auto 15px auto;
 }
 
 .welcome {
@@ -50,8 +60,8 @@ body {
 }
 
 .welcomeContainer {
-  background-color: white;
-  opacity: 0.5;
+  background-color: #cccccc;
+  opacity: 0.9;
   margin: auto 30px;
   border-style: inset;
   max-height: 200px;
