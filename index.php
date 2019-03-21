@@ -8,7 +8,7 @@
 			<link rel="stylesheet" type="text/css" href="./style.css">
 		</head>
 
-		<body class="indexPage">
+		<body class="indexPage" background="/Thumbs/yarn.jpg">
 			<?php include("menu.php")?>
 				<div class="banner"> <!---banner--->
 					<img src="./Buttons/aabanner2.jpg" id="banner">
