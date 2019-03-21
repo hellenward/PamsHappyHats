@@ -1,4 +1,4 @@
-const stepTime = 100; //Global variable for fade in on hats and figures pages
+  const stepTime = 100; //Global variable for fade in on hats and figures pages
 let commissionsArray;  //Global variable for carouselbox
 let commissionIndex = 1; //Global variable for carouselbox
 

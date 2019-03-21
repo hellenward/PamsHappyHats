@@ -313,6 +313,11 @@ input, select {
   margin-left: 100px;
 }
 
+fieldset {
+  background-color: pink;
+  opacity: 0.9;
+}
+
 
 
 
