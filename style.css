@@ -112,6 +112,7 @@ body {
   justify-content: center;
 }
 
+
 /*Commissions carouselbox*/
 
 .commissions {
@@ -303,10 +304,6 @@ label {
 
 input, select {
   display: inline-block;
-}
-
-input {
-  width: 300px;
 }
 
 .platinumPricing label, .platinumPricing input {
