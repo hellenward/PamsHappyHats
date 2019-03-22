@@ -1,7 +1,6 @@
 body {
   background-image: url("Thumbs/Starfield.jpg");
   background-color: #cccccc;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: Helvetica, sans-serif;
@@ -63,7 +62,7 @@ body {
   opacity: 0.9;
   margin: auto 30px;
   border-style: inset;
-  max-height: 200px;
+  max-height: 250px;
 }
 
 .commissionContainer {
@@ -315,6 +314,18 @@ input, select {
 fieldset {
   background-color: pink;
   opacity: 0.9;
+}
+
+.adminInput1 {
+  min-width: 300px;
+}
+
+/*Media queries*/
+
+@media only screen and (min-width: 360px){
+  .topnav {
+    width: 100%%;
+  }
 }
 
 

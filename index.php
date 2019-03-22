@@ -38,13 +38,6 @@
 					<script src="./js/jquery-3.3.1.min.js"> </script>
 					<script language="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async"async""">
 					</script>
-			  	<ins class="adsbygoogle"
-			     style="display:inline-block;width:120px;height:240px"
-			     data-ad-client="ca-pub-9454932042094762"
-			     data-ad-slot="6588600848"></ins>
-			  		<script>
-						(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
 
 		</body>
 	</html>

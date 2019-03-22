@@ -31,7 +31,7 @@
         </div>
         <div class="adminHat hidden">
           <label>Name of Product</label>
-          <input type="text" placeholder="Will show on site and be used as search term">
+          <input class="adminInput1 nameOfProduct" type="text" placeholder="Will show on site and be used as search term">
         </div>
         <div class="adminHat hidden">
           <label>Image</label>
@@ -49,11 +49,13 @@
         </div>
         <div class="platinumPricing hidden">
           <p>Please insert pricing for Platinum</p>
-          <label>P</label><input type="text"></input>
-          <label>NewB</label><input type="text"></input>
-          <label>XS</label><input type="text"></input>
-          <label>S</label><input type="text"></input>
-          <label>M</label><input type="text"></input>
+          <label>Premie</label><input type="text platPremie"></input>
+          <label>Newborn</label><input type="text platNewborn"></input>
+          <label>Extra Small</label><input type="text platXS"></input>
+          <label>Small</label><input type="text platSmall"></input>
+          <label>Medium</label><input type="text platMedium"></input>
+          <label>Large</label><input type="text platLarge"></input>
+          <label>Extra Large</label><input type="text platXLarge"></input>
         </div>
 
         <div>
