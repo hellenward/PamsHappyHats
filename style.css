@@ -1,10 +1,9 @@
 body {
-  background-image: url("/Thumbs/yarn.jpg");
+  background-image: url("Thumbs/Starfield.jpg");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-blend-mode: hard-light;
   font-family: Helvetica, sans-serif;
 }
 
@@ -191,20 +190,20 @@ body {
   margin-left: 60px;
   padding: 5px;
   margin-bottom: 10px;
-  width: 82%;
+  width: 72%;
 }
 
 .contactInputBox2 {
   margin-left: 26px;
   padding: 5px;
   margin-bottom: 10px;
-  width: 82%;
+  width: 72%;
 }
 
 .contactInputBox3 {
   padding: 5px;
   margin-bottom: 10px;
-  width: 82%;
+  width: 72%;
   height: 200px;
 }
 
