@@ -155,15 +155,34 @@ $(document).ready(() => {
     }});
   }
 
+  //*Admin Form
+
   if (currentPage === "adminForm") {
     let selection = document.querySelector(".adminList");
     selection.onchange = () => {
+
+      //*What happens when hat is selected
       if (selection.value === "hat") {
         let elements = document.querySelectorAll(".adminHat");
         elements.forEach((element) => {
           element.classList.remove("hidden");
         });
-      }
+      } else if (selection.value === "commission") {
+          let elements = document.querySelectorAll(".adminCommission");
+          elements.forEach((element) => {
+              element.classList.remove("hidden");
+            });
+          } else if (selection.value === "figure") {
+            let elements = document.querySelectorAll(".adminCollectable");
+            elements.forEach((element) => {
+              element.classList.remove("hidden");
+            });
+          } else {
+            let elements = document.querySelectorAll(".adminEvent");
+            elements.forEach((element) => {
+              element.classList.remove("hidden");
+            });
+          }
     }
     let name = document.querySelector(".nameOfProduct").value;
     let pricingTier = document.querySelector(".pricingTier");

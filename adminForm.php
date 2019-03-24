@@ -29,13 +29,16 @@
             <option value="event">Event</option>
           </select>
         </div>
-        <div class="adminHat hidden">
-          <label>Name of Product</label>
+        <div class="adminHat adminCommission adminCollectable adminEvent hidden">
+          <label>Name of Product or Event</label>
           <input class="adminInput1 nameOfProduct" type="text" placeholder="Will show on site and be used as search term">
         </div>
-        <div class="adminHat hidden">
+        <div class="adminHat adminCommission adminCollectable adminEvent hidden">
           <label>Image</label>
           <input type="file" name="pic" accept="image/*">
+        </div>
+        <div class="adminCollectable hidden">
+        <p>Price: £10.00</p>
         </div>
         <div class="adminHat adminCommission hidden">
           <label>Pricing Tier</label>
@@ -57,6 +60,51 @@
           <label>Large</label><input type="text platLarge"></input>
           <label>Extra Large</label><input type="text platXLarge"></input>
         </div>
+        <div class="adminHat hidden">
+          <label>Do you want to include this on Commissions page?</label>
+          <select>
+            <option value="none">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="adminCommission hidden">
+          <label>Do you want to include this on Hats page?</label>
+          <select>
+            <option value="none">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="adminCommission hidden">
+          <label>Do you want to include this on Figures page?</label>
+          <select>
+            <option value="none">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="adminFigures hidden">
+          <label>Do you want to include this on Commissions page?</label>
+          <select>
+            <option value="none">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="adminEvent hidden">
+          <label>Please enter event URL</label>
+          <input type="text"></input>
+        </div>
+        <div class="adminEvent hidden">
+          <label>Please enter start date and end date of event</label>
+          <input class="startDate" type="date" placeholder="Start Date"></input>
+          <input class="endDate" type="date" placeholder="End Date"></input>
+        </div>
+        <div class="adminEvent hidden">
+          <label>Please enter event address</label>
+          <input type="text"></input>
+        </div>
 
         <div>
           <button class="contactSubmitButton" type="submit">Submit</button>
@@ -65,54 +113,3 @@
       </form>
       <script src="./js/script.js"></script>
 </body>
-
-<!--
-<div class="adminCommission">
-  <label>Do you want to include this on Hats page?</label>
-  <select>
-    <option value="none">Select</option>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select>
-</div>
-<div class="adminCommission">
-  <label>Do you want to include this on Figures page?</label>
-  <select>
-    <option value="none">Select</option>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select>
-</div>
-<div class="adminHats">
-  <label>Do you want to include this on Commissions page?</label>
-  <select>
-    <option value="none">Select</option>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select>
-</div>
-<div class="adminFigures">
-  <label>Do you want to include this on Commissions page?</label>
-  <select>
-    <option value="none">Select</option>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select>
-</div>
-<div class="adminFigures">
-  <label>Please confirm price of Figure</label>
-  <input type="text"></input>
-</div>
-<div class="adminEvent">
-  <label>Please enter event URL</label>
-  <input type="text"></input>
-</div>
-<div class="adminEvent">
-  <label>Please enter date of event</label>
-  <input class="startDate" type="date" placeholder="Start Date"></input>
-  <input class="endDate" type="date" placeholder="End Date"></input>
-</div>
-<div class="adminEvent">
-  <label>Please enter event address</label>
-  <input type="text"></input>
-</div>
