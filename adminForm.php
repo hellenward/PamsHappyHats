@@ -1,4 +1,5 @@
 <?php $page="adminForm";?>
+<?php include("AdminFormHandler.php") ?>
 <!DOCTYPE = html>
 <head>
   <meta charset="UTF-8" content="text/html">
@@ -21,7 +22,7 @@
           </div>
         <div>
           <label>What are you adding to the site?</label>
-          <select class="adminList">
+          <select class="adminList" productType="productType">
             <option value="none">Select</option>
             <option value="hat">Hat</option>
             <option value="commission">Commission</option>
@@ -31,18 +32,18 @@
         </div>
         <div class="adminHat adminCommission adminCollectable adminEvent hidden">
           <label>Name of Product or Event</label>
-          <input class="adminInput1 nameOfProduct" type="text" placeholder="Will show on site and be used as search term">
+          <input class="adminInput1 nameOfProduct" name="name" type="text" placeholder="Will show on site and be used as search term">
         </div>
         <div class="adminHat adminCommission adminCollectable adminEvent hidden">
           <label>Image</label>
-          <input type="file" name="pic" accept="image/*">
+          <input type="file" pic="pic" accept="image/*">
         </div>
         <div class="adminCollectable hidden">
         <p>Price: £10.00</p>
         </div>
         <div class="adminHat adminCommission hidden">
           <label>Pricing Tier</label>
-            <select class="pricingTier">
+            <select class="pricingTier" pricingTier="pricingTier">
               <option value="none">Select</option>
               <option value="bronze">Bronze</option>
               <option value="silver">Silver</option>

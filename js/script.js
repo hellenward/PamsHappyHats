@@ -22,6 +22,7 @@ const showProducts = (products) => {
   });
 }
 
+//*Function to show events on contact page
 const showEvents = (events) => {
   $(".events").empty();
   if(events.length === 0) {
@@ -160,8 +161,6 @@ $(document).ready(() => {
   if (currentPage === "adminForm") {
     let selection = document.querySelector(".adminList");
     selection.onchange = () => {
-
-      //*What happens when hat is selected
       if (selection.value === "hat") {
         let elements = document.querySelectorAll(".adminHat");
         elements.forEach((element) => {
@@ -183,51 +182,52 @@ $(document).ready(() => {
               element.classList.remove("hidden");
             });
           }
-    }
-    let name = document.querySelector(".nameOfProduct").value;
-    let pricingTier = document.querySelector(".pricingTier");
-    pricingTier.onchange = () => {
-      if (pricingTier.value === "bronze") {
-        let newHat = {
-          Name: name,
-          Premie: "£7.00",
-          Newborn: "£8.00",
-          ExtraSmall: "£9.00",
-          Small: "£10.00",
-          Medium: "£11.00",
-          Large: "£12.00",
-          ExtraLarge: "£13.00"
         }
+        let name = document.querySelector(".nameOfProduct").value;
+        let pricingTier = document.querySelector(".pricingTier");
+        pricingTier.onchange = () => {
+        if (pricingTier.value === "bronze") {
+          let newHat = {
+            Name: name,
+            Premie: "£7.00",
+            Newborn: "£8.00",
+            ExtraSmall: "£9.00",
+            Small: "£10.00",
+            Medium: "£11.00",
+            Large: "£12.00",
+            ExtraLarge: "£13.00"
+          }
         console.log(newHat);
-      } else if (pricingTier.value === "silver") {
-        let newHat = {
-          Name: name,
-          Premie: "£8.00",
-          Newborn: "£9.00",
-          ExtraSmall: "£10.00",
-          Small: "£11.00",
-          Medium: "£12.00",
-          Large: "£13.00",
-          ExtraLarge: "£14.00"
+        } else if (pricingTier.value === "silver") {
+            let newHat = {
+              Name: name,
+              Premie: "£8.00",
+              Newborn: "£9.00",
+              ExtraSmall: "£10.00",
+              Small: "£11.00",
+              Medium: "£12.00",
+              Large: "£13.00",
+              ExtraLarge: "£14.00"
+            }
+            console.log(newHat);
+        } else if (pricingTier.value === "gold") {
+            let newHat = {
+              Name: name,
+              Newborn: "£10.00",
+              ExtraSmall: "£11.00",
+              Small: "£12.00",
+              Medium: "£13.00",
+              Large: "£14.00",
+              ExtraLarge: "£15.00"
+            }
+            console.log(newHat);
+        } else {
+            let elements = document.querySelectorAll(".platinumPricing");
+            elements.forEach((element) => {
+              element.classList.remove("hidden");
+            });
+          }
         }
-        console.log(newHat);
-      } else if (pricingTier.value === "gold") {
-        let newHat = {
-          Name: name,
-          Newborn: "£10.00",
-          ExtraSmall: "£11.00",
-          Small: "£12.00",
-          Medium: "£13.00",
-          Large: "£14.00",
-          ExtraLarge: "£15.00"
-        }
-        console.log(newHat);
-      } else {
-        let elements = document.querySelectorAll(".platinumPricing");
-        elements.forEach((element) => {
-          element.classList.remove("hidden");
-        });
-      }
-    }
+
   }
 });
