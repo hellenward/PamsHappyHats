@@ -1,4 +1,5 @@
 <?php
+include("functions.php");
 
 function getField($field, &$destination) {
   if (isset($_POST[$field])) {
@@ -14,11 +15,6 @@ function getFields($fields, &$destination) {
   }
 }
 
-function loadData() {
-  $json = file_get_contents("./Uploads/data.json");
-  $jsonData = json_decode($json, true);
-  return $jsonData;
-}
 
 function saveData($jsonData) {
   $text = json_encode($jsonData);
