@@ -1,13 +1,32 @@
 <?php
-$submitted = false;
-if (isset($_POST["productType"])) {
-  $productType = $_POST["productType"];
-} else {
-  $productType = "";
+
+function getField($field, &$destination) {
+  if (isset($_POST[$field])) {
+    $destination[$field] = $_POST[$field];
+  } else {
+    $destination[$field] = "";
+  }
 }
 
-if($productType) {
-  console.log('.$productType');
+function getFields($fields, &$destination) {
+  foreach ($fields as $field) {
+    getField($field, $destination);
+  }
+}
+
+$submitted = false;
+$form = array();
+
+getFields([
+  "productType",
+  "name",
+  "pic",
+  "pricingTier",
+  "showOnCommissions"
+], $form);
+
+if($form["productType"]) {
+  print_r($form);
   $submitted = true;
 }
 

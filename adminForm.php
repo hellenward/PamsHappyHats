@@ -22,7 +22,7 @@
           </div>
         <div>
           <label>What are you adding to the site?</label>
-          <select class="adminList" productType="productType">
+          <select class="adminList" name="productType">
             <option value="none">Select</option>
             <option value="hat">Hat</option>
             <option value="commission">Commission</option>
@@ -36,14 +36,14 @@
         </div>
         <div class="adminHat adminCommission adminCollectable adminEvent hidden">
           <label>Image</label>
-          <input type="file" pic="pic" accept="image/*">
+          <input type="file" name="pic" accept="image/*">
         </div>
         <div class="adminCollectable hidden">
         <p>Price: £10.00</p>
         </div>
         <div class="adminHat adminCommission hidden">
           <label>Pricing Tier</label>
-            <select class="pricingTier" pricingTier="pricingTier">
+            <select class="pricingTier" name="pricingTier">
               <option value="none">Select</option>
               <option value="bronze">Bronze</option>
               <option value="silver">Silver</option>
@@ -53,17 +53,17 @@
         </div>
         <div class="platinumPricing hidden">
           <p>Please insert pricing for Platinum</p>
-          <label>Premie</label><input type="text platPremie"></input>
-          <label>Newborn</label><input type="text platNewborn"></input>
-          <label>Extra Small</label><input type="text platXS"></input>
-          <label>Small</label><input type="text platSmall"></input>
-          <label>Medium</label><input type="text platMedium"></input>
-          <label>Large</label><input type="text platLarge"></input>
-          <label>Extra Large</label><input type="text platXLarge"></input>
+          <label>Premie</label><input name="premiePlatPrice" type="text platPremie"></input>
+          <label>Newborn</label><input name="newbornPlatPrice" type="text platNewborn"></input>
+          <label>Extra Small</label><input name="XSPlatPrice" type="text platXS"></input>
+          <label>Small</label><input name="smallPlatPrice" type="text platSmall"></input>
+          <label>Medium</label><input name="mediumPlatPrice" type="text platMedium"></input>
+          <label>Large</label><input name="largePlatPrice" type="text platLarge"></input>
+          <label>Extra Large</label><input name="XLPlatPrice" type="text platXLarge"></input>
         </div>
-        <div class="adminHat hidden">
+        <div class="adminHat adminFigures hidden">
           <label>Do you want to include this on Commissions page?</label>
-          <select>
+          <select name="showOnCommissions">
             <option value="none">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -71,7 +71,7 @@
         </div>
         <div class="adminCommission hidden">
           <label>Do you want to include this on Hats page?</label>
-          <select>
+          <select name="showOnHats">
             <option value="none">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -79,15 +79,7 @@
         </div>
         <div class="adminCommission hidden">
           <label>Do you want to include this on Figures page?</label>
-          <select>
-            <option value="none">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <div class="adminFigures hidden">
-          <label>Do you want to include this on Commissions page?</label>
-          <select>
+          <select name="showOnFigures">
             <option value="none">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -95,16 +87,16 @@
         </div>
         <div class="adminEvent hidden">
           <label>Please enter event URL</label>
-          <input type="text"></input>
+          <input name="eventURL" type="text"></input>
         </div>
         <div class="adminEvent hidden">
           <label>Please enter start date and end date of event</label>
-          <input class="startDate" type="date" placeholder="Start Date"></input>
-          <input class="endDate" type="date" placeholder="End Date"></input>
+          <input name="startDate" class="startDate" type="date" placeholder="Start Date"></input>
+          <input name="endDate" class="endDate" type="date" placeholder="End Date"></input>
         </div>
         <div class="adminEvent hidden">
           <label>Please enter event address</label>
-          <input type="text"></input>
+          <input name="eventAddress" type="text"></input>
         </div>
 
         <div>
