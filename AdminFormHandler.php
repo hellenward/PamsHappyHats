@@ -14,6 +14,17 @@ function getFields($fields, &$destination) {
   }
 }
 
+function loadData() {
+  $json = file_get_contents("./Uploads/data.json");
+  $jsonData = json_decode($json, true);
+  return $jsonData;
+}
+
+function saveData($jsonData) {
+  $text = json_encode($jsonData);
+  file_put_contents("./Uploads/data.json", $text);
+}
+
 $submitted = false;
 $form = array();
 
@@ -26,7 +37,9 @@ getFields([
 ], $form);
 
 if($form["productType"]) {
-  print_r($form);
+  $jsonData = loadData();
+  saveData($jsonData);
+  print_r($jsonData);
   $submitted = true;
 }
 
