@@ -101,7 +101,7 @@ $(document).ready(() => {
   const currentPage = $("body").attr("class");
   if (currentPage === "hatsPage") {
     let hats = [];
-    $.ajax({url: "./hats.json", dataType: "json", success: (data) => {
+    $.ajax({url: "./products.php", dataType: "json", success: (data) => {
       hats = data;
       showProducts(data);
 

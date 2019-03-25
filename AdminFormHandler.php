@@ -25,6 +25,15 @@ function saveData($jsonData) {
   file_put_contents("./Uploads/data.json", $text);
 }
 
+function createHat($fields, &$output) {
+  $hat = array();
+  $hat["type"] = "hat";
+  $hat["name"] = $fields["name"];
+  $hat["pricingTier"] = $fields["pricingTier"];
+  $hat["showOnCommissions"] = $fields["showOnCommissions"];
+  array_push($output, $hat);
+}
+
 $submitted = false;
 $form = array();
 
@@ -38,6 +47,9 @@ getFields([
 
 if($form["productType"]) {
   $jsonData = loadData();
+  if($form["productType"] === "hat") {
+    createHat($form, $jsonData);
+  }
   saveData($jsonData);
   print_r($jsonData);
   $submitted = true;
