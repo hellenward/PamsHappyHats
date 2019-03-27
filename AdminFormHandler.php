@@ -15,10 +15,14 @@ function getFields($fields, &$destination) {
   }
 }
 
-
 function saveData($jsonData) {
   $text = json_encode($jsonData);
   file_put_contents("./Uploads/data.json", $text);
+}
+
+function saveDataCommissions($jsonDataCommissions) {
+  $text = json_encode($jsonDataCommissions);
+  file_put_contents("./Uploads/dataCommissions.json", $text);
 }
 
 function createHat($fields, &$output) {
@@ -30,6 +34,16 @@ function createHat($fields, &$output) {
   array_push($output, $hat);
 }
 
+function createCommission($fields, &$output) {
+  $commission = array();
+  $commission["type"] = "commission";
+  $commission["name"] = $fields["name"];
+  $commission["pricingTier"] = $fields["pricingTier"];
+  $commission["showOnHats"] = $fields["showOnHats"];
+  $commission["showOnFigures"] = $fields["showOnFigures"];
+  array_push($commission, $output);
+}
+
 $submitted = false;
 $form = array();
 
@@ -38,16 +52,21 @@ getFields([
   "name",
   "pic",
   "pricingTier",
-  "showOnCommissions"
+  "showOnCommissions",
+  "showOnHats",
+  "showOnFigures"
 ], $form);
 
 if($form["productType"]) {
-  $jsonData = loadData();
   if($form["productType"] === "hat") {
+    $jsonData = loadData();
     createHat($form, $jsonData);
+    saveData($jsonData);
+  } elseif($form["productType"] === "commission") {
+    $jsonDataCommissions = loadDataCommissions();
+    createCommission($form, $jsonDataCommissions);
+    saveDataCommissions($jsonDataCommissions);
   }
-  saveData($jsonData);
-  print_r($jsonData);
   $submitted = true;
 }
 
