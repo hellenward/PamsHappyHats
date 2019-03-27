@@ -30,18 +30,18 @@
             <option value="event">Event</option>
           </select>
         </div>
-        <div class="adminHat adminCommission adminCollectable adminEvent hidden">
+        <div class="adminHat adminCommission adminCollectable adminEvent hidden adminReset">
           <label>Name of Product or Event</label>
           <input class="adminInput1 nameOfProduct" name="name" type="text" placeholder="Will show on site and be used as search term">
         </div>
-        <div class="adminHat adminCommission adminCollectable adminEvent hidden">
+        <div class="adminHat adminCommission adminCollectable adminEvent hidden adminReset">
           <label>Image</label>
           <input type="file" name="pic" accept="image/*">
         </div>
-        <div class="adminCollectable hidden">
+        <div class="adminCollectable hidden adminReset">
         <p>Price: £10.00</p>
         </div>
-        <div class="adminHat adminCommission hidden">
+        <div class="adminHat adminCommission hidden adminReset">
           <label>Pricing Tier</label>
             <select class="pricingTier" name="pricingTier">
               <option value="none">Select</option>
@@ -51,7 +51,7 @@
               <option value="platinum">Platinum</option>
             </select>
         </div>
-        <div class="platinumPricing hidden">
+        <div class="platinumPricing hidden adminReset">
           <p>Please insert pricing for Platinum</p>
           <label>Premie</label><input name="premiePlatPrice" type="text platPremie"></input>
           <label>Newborn</label><input name="newbornPlatPrice" type="text platNewborn"></input>
@@ -61,7 +61,7 @@
           <label>Large</label><input name="largePlatPrice" type="text platLarge"></input>
           <label>Extra Large</label><input name="XLPlatPrice" type="text platXLarge"></input>
         </div>
-        <div class="adminHat adminFigures hidden">
+        <div class="adminHat adminFigures hidden adminReset">
           <label>Do you want to include this on Commissions page?</label>
           <select name="showOnCommissions">
             <option value="none">Select</option>
@@ -69,7 +69,7 @@
             <option value="no">No</option>
           </select>
         </div>
-        <div class="adminCommission hidden">
+        <div class="adminCommission hidden adminReset">
           <label>Do you want to include this on Hats page?</label>
           <select name="showOnHats">
             <option value="none">Select</option>
@@ -77,7 +77,7 @@
             <option value="no">No</option>
           </select>
         </div>
-        <div class="adminCommission hidden">
+        <div class="adminCommission hidden adminReset">
           <label>Do you want to include this on Figures page?</label>
           <select name="showOnFigures">
             <option value="none">Select</option>
@@ -85,16 +85,16 @@
             <option value="no">No</option>
           </select>
         </div>
-        <div class="adminEvent hidden">
+        <div class="adminEvent hidden adminReset">
           <label>Please enter event URL</label>
           <input name="eventURL" type="text"></input>
         </div>
-        <div class="adminEvent hidden">
+        <div class="adminEvent hidden adminReset">
           <label>Please enter start date and end date of event</label>
           <input name="startDate" class="startDate" type="date" placeholder="Start Date"></input>
           <input name="endDate" class="endDate" type="date" placeholder="End Date"></input>
         </div>
-        <div class="adminEvent hidden">
+        <div class="adminEvent hidden adminReset">
           <label>Please enter event address</label>
           <input name="eventAddress" type="text"></input>
         </div>

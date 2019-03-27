@@ -162,21 +162,37 @@ $(document).ready(() => {
     let selection = document.querySelector(".adminList");
     selection.onchange = () => {
       if (selection.value === "hat") {
+        let hideMe = document.querySelectorAll(".adminReset");
+        hideMe.forEach((elementToHide) => {
+          elementToHide.classList.add("hidden");
+        });
         let elements = document.querySelectorAll(".adminHat");
         elements.forEach((element) => {
           element.classList.remove("hidden");
         });
       } else if (selection.value === "commission") {
+        let hideMe = document.querySelectorAll(".adminReset");
+        hideMe.forEach((elementToHide) => {
+          elementToHide.classList.add("hidden");
+        });
           let elements = document.querySelectorAll(".adminCommission");
           elements.forEach((element) => {
               element.classList.remove("hidden");
             });
           } else if (selection.value === "figure") {
+            let hideMe = document.querySelectorAll(".adminReset");
+            hideMe.forEach((elementToHide) => {
+              elementToHide.classList.add("hidden");
+            });
             let elements = document.querySelectorAll(".adminCollectable");
             elements.forEach((element) => {
               element.classList.remove("hidden");
             });
           } else {
+            let hideMe = document.querySelectorAll(".adminReset");
+            hideMe.forEach((elementToHide) => {
+              elementToHide.classList.add("hidden");
+            });
             let elements = document.querySelectorAll(".adminEvent");
             elements.forEach((element) => {
               element.classList.remove("hidden");
