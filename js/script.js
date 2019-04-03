@@ -1,65 +1,53 @@
-  const stepTime = 100; //Global variable for fade in on hats and figures pages
+const stepTime = 100; //Global variable for fade in on hats and figures pages
 let commissionsArray;  //Global variable for carouselbox
 let commissionIndex = 1; //Global variable for carouselbox
 
 //Function to show products on hats page, includes scenario where we're using the search box
-const showProducts = (products) => {
-  $(".products").empty();
-  if(products.length === 0) {
-    $(".products").append('<div class="hidden fade">Sorry, there are no hats here!</div>');
+const showItems = (items, container, emptyMessage, callback) => {
+  $(container).empty();
+  if(items.length === 0) {
+    $(container).append(`<div class="hidden fade">Sorry, there are no ${emptyMessage} here!</div>`);
   }
-  products.forEach((hat) => {
-    $(".products").append(`<div class="product hidden fade">
-      <img src="${hat.image}">
-      <h4>${hat.name}</h4>
-      <h4>${hat.price}</h4>
-    </div>`);
+  items.forEach((item, index) => {
+    callback(item, index);
   });
-  $(".fade").each((i, product) => {
+  $(".fade").each((i, item) => {
     setTimeout(() => {
-      $(product).removeClass("hidden").addClass("shown");
+      $(item).removeClass("hidden").addClass("shown");
     }, i*stepTime)
+  });
+}
+
+const showProducts = (products) => {
+  showItems(products, ".products", "products", (item) => {
+    $(".products").append(`<div class="product hidden fade">
+      <img src="${item.image}">
+      <h4>${item.name}</h4>
+      <h4>${item.price}</h4>
+    </div>`);
   });
 }
 
 //*Function to show events on contact page
 const showEvents = (events) => {
-  $(".events").empty();
-  if(events.length === 0) {
-    $(".events").append(('div class="hidden fade">Sorry, there are no upcoming events. Check back later!</div>'));
-  }
-  events.forEach((event, index) => {
+  showItems(events, ".events", "events", (item, index) => {
     $(".events").append(`  <div class="event ${index%2 === 0 ? "event1" : "event2"}">
-        <img src="${event.image}">
-        <a href="${event.url}">${event.name}</a>
-        <p class="date">${event.startDate} - ${event.endDate}</p>
-        <p class="venue">${event.address}</p>
+        <img src="${item.image}">
+        <a href="${item.url}">${item.name}</a>
+        <p class="date">${item.startDate} - ${item.endDate}</p>
+        <p class="venue">${item.address}</p>
       </div>`);
-  });
-  $(".fade").each((i, event) => {
-    setTimeout(() => {
-      $(event).removeClass("hidden").addClass("shown");
-    }, i*stepTime)
   });
 }
 
 //Function to show figures on figures page, includes scenario where we're using the search box
 const showFigures = (figures) => {
-  $(".figures").empty();
-  if(figures.length === 0) {
-    $(".figures").append('<div class="hidden fade">Sorry, there are no figures here!</div>');
-  }
-  figures.forEach((figure) => {
+  showItems(figures, ".figures", "figures", (item) => {
     $(".figures").append(`<div class="product hidden fade">
-      <img src="${figure.image}">
-      <h4>${figure.name}</h4>
-      <h4>${figure.price}</h4>
+      <img src="${item.image}">
+      <h4>${item.name}</h4>
+      <h4>${item.price}</h4>
     </div>`);
-  });
-  $(".fade").each((i, figure) => {
-    setTimeout(() => {
-      $(figure).removeClass("hidden").addClass("shown");
-    }, i*stepTime)
   });
 };
 
