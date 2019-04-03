@@ -25,23 +25,22 @@
           <select class="adminList" name="productType">
             <option value="none">Select</option>
             <option value="hat">Hat</option>
-            <option value="commission">Commission</option>
             <option value="figure">Collectable Figure</option>
             <option value="event">Event</option>
           </select>
         </div>
-        <div class="adminHat adminCommission adminCollectable adminEvent hidden adminReset">
+        <div class="adminHat adminCollectable adminEvent hidden adminReset">
           <label>Name of Product or Event</label>
           <input class="adminInput1 nameOfProduct" name="name" type="text" placeholder="Will show on site and be used as search term">
         </div>
-        <div class="adminHat adminCommission adminCollectable adminEvent hidden adminReset">
+        <div class="adminHat adminCollectable adminEvent hidden adminReset">
           <label>Image</label>
           <input type="file" name="pic" accept="image/*">
         </div>
         <div class="adminCollectable hidden adminReset">
         <p>Price: £10.00</p>
         </div>
-        <div class="adminHat adminCommission hidden adminReset">
+        <div class="adminHat hidden adminReset">
           <label>Pricing Tier</label>
             <select class="pricingTier" name="pricingTier">
               <option value="none">Select</option>
@@ -64,22 +63,6 @@
         <div class="adminHat adminFigures adminCollectable hidden adminReset">
           <label>Do you want to include this on Commissions page?</label>
           <select name="showOnCommissions">
-            <option value="none">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <div class="adminCommission hidden adminReset">
-          <label>Do you want to include this on Hats page?</label>
-          <select name="showOnHats">
-            <option value="none">Select</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <div class="adminCommission hidden adminReset">
-          <label>Do you want to include this on Figures page?</label>
-          <select name="showOnFigures">
             <option value="none">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
