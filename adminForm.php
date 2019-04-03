@@ -61,7 +61,7 @@
           <label>Large</label><input name="largePlatPrice" type="text platLarge"></input>
           <label>Extra Large</label><input name="XLPlatPrice" type="text platXLarge"></input>
         </div>
-        <div class="adminHat adminFigures hidden adminReset">
+        <div class="adminHat adminFigures adminCollectable hidden adminReset">
           <label>Do you want to include this on Commissions page?</label>
           <select name="showOnCommissions">
             <option value="none">Select</option>

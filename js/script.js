@@ -149,58 +149,31 @@ $(document).ready(() => {
   if (currentPage === "adminForm") {
     let selection = document.querySelector(".adminList");
     selection.onchange = () => {
+      $(".adminReset").addClass("hidden");
       if (selection.value === "hat") {
-        let hideMe = document.querySelectorAll(".adminReset");
-        hideMe.forEach((elementToHide) => {
-          elementToHide.classList.add("hidden");
-        });
-        let elements = document.querySelectorAll(".adminHat");
-        elements.forEach((element) => {
-          element.classList.remove("hidden");
-        });
+        $(".adminHat").removeClass("hidden");
       } else if (selection.value === "commission") {
-        let hideMe = document.querySelectorAll(".adminReset");
-        hideMe.forEach((elementToHide) => {
-          elementToHide.classList.add("hidden");
-        });
-          let elements = document.querySelectorAll(".adminCommission");
-          elements.forEach((element) => {
-              element.classList.remove("hidden");
-            });
-          } else if (selection.value === "figure") {
-            let hideMe = document.querySelectorAll(".adminReset");
-            hideMe.forEach((elementToHide) => {
-              elementToHide.classList.add("hidden");
-            });
-            let elements = document.querySelectorAll(".adminCollectable");
-            elements.forEach((element) => {
-              element.classList.remove("hidden");
-            });
-          } else {
-            let hideMe = document.querySelectorAll(".adminReset");
-            hideMe.forEach((elementToHide) => {
-              elementToHide.classList.add("hidden");
-            });
-            let elements = document.querySelectorAll(".adminEvent");
-            elements.forEach((element) => {
-              element.classList.remove("hidden");
-            });
-          }
+        $(".adminCommission").removeClass("hidden");
+      } else if (selection.value === "figure") {
+        $(".adminCollectable").removeClass("hidden");
+      } else {
+        $(".adminEvent").removeClass("hidden");
+      }
+    }
+    let name = document.querySelector(".nameOfProduct").value;
+    let pricingTier = document.querySelector(".pricingTier");
+    pricingTier.onchange = () => {
+      if (pricingTier.value === "bronze") {
+        let newHat = {
+          Name: name,
+          Premie: "£7.00",
+          Newborn: "£8.00",
+          ExtraSmall: "£9.00",
+          Small: "£10.00",
+          Medium: "£11.00",
+          Large: "£12.00",
+          ExtraLarge: "£13.00"
         }
-        let name = document.querySelector(".nameOfProduct").value;
-        let pricingTier = document.querySelector(".pricingTier");
-        pricingTier.onchange = () => {
-        if (pricingTier.value === "bronze") {
-          let newHat = {
-            Name: name,
-            Premie: "£7.00",
-            Newborn: "£8.00",
-            ExtraSmall: "£9.00",
-            Small: "£10.00",
-            Medium: "£11.00",
-            Large: "£12.00",
-            ExtraLarge: "£13.00"
-          }
         console.log(newHat);
         } else if (pricingTier.value === "silver") {
             let newHat = {
@@ -232,6 +205,5 @@ $(document).ready(() => {
             });
           }
         }
-
-  }
-});
+      }
+    });
