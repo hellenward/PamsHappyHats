@@ -1,1 +1,227 @@
-[]
+[
+    {
+        "type": "hat",
+        "name": "Mario Mushroom",
+        "price": "From £7.00",
+        "image": "Thumbs/Mushroom HH168.jpg",
+        "priceTier": "Bronze",
+        "Premie": "£7.00",
+        "Newborn": "£8.00",
+        "Extra Small": "£9.00",
+        "Small": "£10.00",
+        "Medium": "£11.00",
+        "Large": "12.00",
+        "Extra Large": "£13.00"
+    },
+    {
+        "type": "hat",
+        "name": "Tigger",
+        "price": "From £7.00",
+        "image": "Thumbs/Tigger HH170.jpg",
+        "priceTier": "Bronze",
+        "Premie": "£7.00",
+        "Newborn": "£8.00",
+        "Extra Small": "£9.00",
+        "Small": "£10.00",
+        "Medium": "£11.00",
+        "Large": "12.00",
+        "Extra Large": "£13.00"
+    },
+    {
+        "type": "hat",
+        "name": "Poodle",
+        "price": "From £7.00",
+        "image": "Thumbs/Poodle HH163.jpg",
+        "priceTier": "Bronze",
+        "Premie": "£7.00",
+        "Newborn": "£8.00",
+        "Extra Small": "£9.00",
+        "Small": "£10.00",
+        "Medium": "£11.00",
+        "Large": "12.00",
+        "Extra Large": "£13.00"
+    },
+    {
+        "type": "hat",
+        "name": "Angry Bird",
+        "price": "From £7.00",
+        "image": "Thumbs/Angry Bird HH165.jpg",
+        "priceTier": "Bronze",
+        "Premie": "£7.00",
+        "Newborn": "£8.00",
+        "Extra Small": "£9.00",
+        "Small": "£10.00",
+        "Medium": "£11.00",
+        "Large": "12.00",
+        "Extra Large": "£13.00"
+    },
+    {
+        "type": "hat",
+        "name": "America",
+        "price": "From £7.00",
+        "image": "Thumbs/America HH167.jpg",
+        "priceTier": "Bronze",
+        "Premie": "£7.00",
+        "Newborn": "£8.00",
+        "Extra Small": "£9.00",
+        "Small": "£10.00",
+        "Medium": "£11.00",
+        "Large": "12.00",
+        "Extra Large": "£13.00"
+    },
+    {
+        "type": "hat",
+        "name": "Cthulhu",
+        "price": "From £8.00",
+        "image": "Thumbs/HH188 Cthulhu.jpg",
+        "priceTier": "Silver",
+        "Premie": "£8.00",
+        "Newborn": "£9.00",
+        "Extra Small": "£10.00",
+        "Small": "£11.00",
+        "Medium": "£12.00",
+        "Large": "13.00",
+        "Extra Large": "£14.00"
+    },
+    {
+        "type": "hat",
+        "name": "Cruella",
+        "price": "From £8.00",
+        "image": "Thumbs/HH146 Cruella.jpg",
+        "priceTier": "Silver",
+        "Premie": "£8.00",
+        "Newborn": "£9.00",
+        "Extra Small": "£10.00",
+        "Small": "£11.00",
+        "Medium": "£12.00",
+        "Large": "13.00",
+        "Extra Large": "£14.00"
+    },
+    {
+        "type": "hat",
+        "name": "Rapunzel",
+        "price": "From £8.00",
+        "image": "Thumbs/HH119Rapunzel (2).jpg",
+        "priceTier": "Silver",
+        "Premie": "£8.00",
+        "Newborn": "£9.00",
+        "Extra Small": "£10.00",
+        "Small": "£11.00",
+        "Medium": "£12.00",
+        "Large": "13.00",
+        "Extra Large": "£14.00"
+    },
+    {
+        "type": "hat",
+        "name": "Oscar",
+        "price": "From £10.00",
+        "image": "Thumbs/HH218 Oscar.jpg",
+        "priceTier": "Gold",
+        "Newborn": "£10.00",
+        "Extra Small": "£11.00",
+        "Small": "£12.00",
+        "Medium": "£13.00",
+        "Large": "£14.00",
+        "Extra Large": "£15.00"
+    },
+    {
+        "type": "event",
+        "name": "Walker Stalker",
+        "url": "https://walkerstalkercon.com/london/",
+        "startDate": "2019-03-30",
+        "endDate": "2019-03-31",
+        "address": "ExCel London, Royal Victoria Dock, 1 Western Gateway, Royal Docks, London E16 2XL",
+        "image": "ContactGraphics/WalkerStalker.png"
+    },
+    {
+      "type": "event",
+      "name": "Star Wars Con",
+      "url": "https://www.starwarscon.co.uk/",
+      "startDate": "2019-04-06",
+      "endDate": "2019-04-06",
+      "address": "Allum Manor House & Hall, 2 Allum Lane, Borehamwood WD6 3PJ",
+      "image": "ContactGraphics/Elstree-Con.png"
+    },
+    {
+      "type": "event",
+      "name": "Bedford Who",
+      "url": "http://bedfordwhocharitycon.co.uk/",
+      "startDate": "2019-04-13",
+      "endDate": "2019-04-13",
+      "address": "The Theatre, University of Bedfordshire, Polhill Avenue, Bedford MK41 9EA",
+      "image": "ContactGraphics/BedfordWho.jpg"
+    },
+    {
+      "type": "event",
+      "name": "Thames Con",
+      "url": "https://thamescon.co.uk/",
+      "startDate": "2019-04-28",
+      "endDate": "2019-04-28",
+      "address": "Abingdon & Whitney College, Abingdon Campus, Wootton Road, Abingdon OX14 1GG",
+      "image": "ContactGraphics/ThamesCon.png"
+    },
+    {
+      "type": "collectableFigure",
+      "name": "13th Doctor - Whittaker",
+      "price": "£10.00",
+      "image": "./Thumbs/HH263 D2 12 Whittaker.jpg"
+    },
+    {
+      "type": "collectableFigure",
+      "name": "Pting Figure",
+      "price": "£10.00",
+      "image": "./Thumbs/HH306 Pting.jpg"
+    },
+    {
+      "type": "collectableFigure",
+      "name": "12th Doctor - Capaldi",
+      "price": "£10.00",
+      "image": "./Thumbs/HH262 Dr Capaldi.jpg"
+    },
+    {
+      "type": "collectableFigure",
+      "name": "The Valeyard",
+      "price": "£10.00",
+      "image": "./Thumbs/HH298 The Valeyard.jpg"
+    },
+    {
+      "type": "collectableFigure",
+      "name": "Mollari",
+      "price": "£10.00",
+      "image": "./Thumbs/HH305 Mollari.jpg"
+    },
+    {
+        "type": "hat",
+        "name": "Blue Animal",
+        "price": "From £7.00",
+        "image": "Thumbs/Commissions/animalblue.jpg"
+    },
+    {
+        "type": "hat",
+        "isCommission": true,
+        "name": "Blue Octopus",
+        "price": "From £7.00",
+        "image": "Thumbs/Commissions/blue octo.jpg"
+    },
+    {
+        "type": "hat",
+        "isCommission": true,
+        "name": "Facehugger",
+        "price": "From £7.00",
+        "image": "Thumbs/Commissions/Facehugger2.jpg"
+    },
+    {
+        "type": "hat",
+        "isCommission": true,
+        "name": "Dog Rastafarian Hat",
+        "price": "From £7.00",
+        "image": "Thumbs/Commissions/Dog Hat Rasta.jpg"
+    },
+    {
+        "type": "collectableFigure",
+        "isCommission": true,
+        "name": "Pink Dalek",
+        "price": "From £7.00",
+        "image": "Thumbs/Commissions/Pink Dalek.jpg"
+    }
+]

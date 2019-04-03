@@ -1,17 +1,22 @@
 <?php
 include("functions.php");
 
-function applyFilter($products, &$output) {
+function applyFilter($products, &$output, $filter) {
   foreach ($products as $product) {
-    if($product["type"] === "hat") {
+    if($filter === "commission") {
+      if(isset($product["isCommission"]) && $product["isCommission"] === true) {
+        array_push($output, $product);
+      }
+    } elseif($product["type"] === $filter) {
         array_push($output, $product);
     }
   }
 }
 
 $json = loadData();
-$hats = [];
-applyFilter($json, $hats);
-echo json_encode($hats);
+$results = [];
+$filter = $_GET["type"];
+applyFilter($json, $results, $filter);
+echo json_encode($results);
 
 ?>

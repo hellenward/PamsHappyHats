@@ -1,3 +1,4 @@
+<?php $page="purchases";?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,19 +8,13 @@
   </head>
 
   <body>
-    <div class="topnav">
-      <a href="./index.html">Home</a>
-      <a href="./hats.html">Hats</a>
-      <a class href="./collectableFigures.html">Collectible Figures</a>
-      <a href="./commissions.html">Commissions</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./gallery.html">Gallery</a>
-    </div>
+
+    <?php include("menu.php")?> <!--navigation bar--->
 
     <div class="banner"> <!---banner--->
       <img src="./Buttons/aabanner2.jpg" id="banner">
     </div>
-
+      
     <script src="./js/jquery-3.3.1.min.js"> </script>
     <script src="./js/script.js"></script>
 

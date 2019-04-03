@@ -89,7 +89,7 @@ $(document).ready(() => {
   const currentPage = $("body").attr("class");
   if (currentPage === "hatsPage") {
     let hats = [];
-    $.ajax({url: "./products.php", dataType: "json", success: (data) => {
+    $.ajax({url: "./products.php?type=hat", dataType: "json", success: (data) => {
       hats = data;
       showProducts(data);
 
@@ -109,7 +109,7 @@ $(document).ready(() => {
 
   if (currentPage === "collectableFiguresPage") {
     let figures = [];
-    $.ajax({url: "./collectableFigures.json", dataType: "json", success: (data) => {
+    $.ajax({url: "./products.php?type=collectableFigure", dataType: "json", success: (data) => {
       figures = data;
       showFigures(data);
     }});
@@ -129,7 +129,7 @@ $(document).ready(() => {
 
   if (currentPage === "commissionsPage") {
     let commissions = [];
-    $.ajax({url: "./commissions.json", dataType: "json", success: (data) => {
+    $.ajax({url: "./products.php?type=commission", dataType: "json", success: (data) => {
       commissions = data;
       showCommissions(data);
     }});
@@ -137,7 +137,7 @@ $(document).ready(() => {
 
   if (currentPage === "contactPage") {
     let events = [];
-    $.ajax({url: "./events.json", dataType: "json", success: (data) => {
+    $.ajax({url: "./products.php?type=event", dataType: "json", success: (data) => {
       events = data;
       console.log(events);
       showEvents(data);
