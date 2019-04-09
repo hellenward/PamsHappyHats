@@ -18,12 +18,22 @@ const showItems = (items, container, emptyMessage, callback) => {
   });
 }
 
+const getPrice = (product) => {
+  const tiers = ["Premie", "Newborn", "Extra Small", "Small", "Medium", "Large", "Extra Large"];
+  for (const tier of tiers) {
+    if (product[tier]) {
+      return product[tier];
+    }
+  }
+  return "unknown";
+}
+
 const showProducts = (products) => {
   showItems(products, ".products", "products", (item) => {
     $(".products").append(`<div class="product hidden fade">
       <img src="${item.image}">
       <h4>${item.name}</h4>
-      <h4>${item.price}</h4>
+      <h4>From ${getPrice(item)}</h4>
     </div>`);
   });
 }
