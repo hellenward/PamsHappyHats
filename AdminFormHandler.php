@@ -21,11 +21,15 @@ function saveData($jsonData) {
 }
 
 function createHat($fields, $image, &$output) {
+  $error = validateHat($fields);
+  if ($error) {
+    return $error;
+  }
   $hat = array();
   $hat["type"] = "hat";
   $hat["name"] = $fields["name"];
   $hat["pricingTier"] = $fields["pricingTier"];
-  $hat["image"] = $image; 
+  $hat["image"] = $image;
   $hat["showOnCommissions"] = $fields["showOnCommissions"];
   setPriceBands($fields["pricingTier"], $hat);
   array_push($output, $hat);
@@ -43,29 +47,38 @@ function createCommission($fields, &$output) {
 
 function setPriceBands($pricingTier, &$output) {
   if ($pricingTier === "bronze") {
-    $output["premie"] = "£7.00";
-    $output["newborn"] = "£8.00";
-    $output["extraSmall"] = "£9.00";
-    $output["small"] = "£10.00";
-    $output["medium"] = "£11.00";
-    $output["large"] = "£12.00";
-    $output["extraLarge"] = "£13.00";
+    $output["Premie"] = "£7.00";
+    $output["Newborn"] = "£8.00";
+    $output["Extra Small"] = "£9.00";
+    $output["Small"] = "£10.00";
+    $output["Medium"] = "£11.00";
+    $output["Large"] = "£12.00";
+    $output["Extra Large"] = "£13.00";
   } elseif ($pricingTier === "silver") {
-    $output["premie"] = "£8.00";
-    $output["newborn"] = "£9.00";
-    $output["extraSmall"] = "£10.00";
-    $output["small"] = "£11.00";
-    $output["medium"] = "£12.00";
-    $output["large"] = "£13.00";
-    $output["extraLarge"] = "£14.00";
+    $output["Premie"] = "£8.00";
+    $output["Newborn"] = "£9.00";
+    $output["Extra Small"] = "£10.00";
+    $output["Small"] = "£11.00";
+    $output["Medium"] = "£12.00";
+    $output["Large"] = "£13.00";
+    $output["Extra Large"] = "£14.00";
   } elseif ($pricingTier === "gold") {
-    $output["premie"] = "£9.00";
-    $output["newborn"] = "£10.00";
-    $output["extraSmall"] = "£11.00";
-    $output["small"] = "£12.00";
-    $output["medium"] = "£13.00";
-    $output["large"] = "£14.00";
-    $output["extraLarge"] = "£15.00";
+    $output["Premie"] = "£9.00";
+    $output["Newborn"] = "£10.00";
+    $output["Extra Small"] = "£11.00";
+    $output["Small"] = "£12.00";
+    $output["Medium"] = "£13.00";
+    $output["Large"] = "£14.00";
+    $output["Extra Large"] = "£15.00";
+  }
+}
+
+function validateHat($hat) {
+  $fields = array("name", "pricingTier", "showOnCommissions");
+  foreach($fields as $field) {
+    if(!isset($hat[$field]) || $hat[$field] === "") {
+      return "Missing " . $field;
+    }
   }
 }
 
@@ -90,7 +103,7 @@ if($form["productType"]) {
   }
   if($form["productType"] === "hat") {
     $jsonData = loadData();
-    createHat($form, $image, $jsonData);
+    $error = createHat($form, $image, $jsonData);
     saveData($jsonData);
   } elseif($form["productType"] === "commission") {
     $jsonDataCommissions = loadDataCommissions();
@@ -99,6 +112,5 @@ if($form["productType"]) {
   }
   $submitted = true;
 }
-
 
  ?>

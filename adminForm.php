@@ -87,5 +87,9 @@
         </div>
         </fieldset>
       </form>
+      <?php if (isset ($error)) {
+        echo $error;
+      } ?>
+
       <script src="./js/script.js"></script>
 </body>

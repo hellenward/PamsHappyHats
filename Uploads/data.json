@@ -248,5 +248,19 @@
         "medium": "\u00a312.00",
         "large": "\u00a313.00",
         "extraLarge": "\u00a314.00"
+    },
+    {
+        "type": "hat",
+        "name": "Bob the Hat",
+        "pricingTier": "gold",
+        "image": ".\/Thumbs\/36490158_10156450831314134_9170376654432763904_n.jpg",
+        "showOnCommissions": "yes",
+        "Premie": "\u00a39.00",
+        "Newborn": "\u00a310.00",
+        "Extra Small": "\u00a311.00",
+        "Small": "\u00a312.00",
+        "Medium": "\u00a313.00",
+        "Large": "\u00a314.00",
+        "Extra Large": "\u00a315.00"
     }
 ]

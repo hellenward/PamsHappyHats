@@ -25,7 +25,7 @@ const getPrice = (product) => {
       return product[tier];
     }
   }
-  return "unknown";
+  return "unknown"; 
 }
 
 const showProducts = (products) => {
