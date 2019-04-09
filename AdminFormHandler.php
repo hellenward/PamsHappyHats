@@ -20,11 +20,12 @@ function saveData($jsonData) {
   file_put_contents("./Uploads/data.json", $text);
 }
 
-function createHat($fields, &$output) {
+function createHat($fields, $image, &$output) {
   $hat = array();
   $hat["type"] = "hat";
   $hat["name"] = $fields["name"];
   $hat["pricingTier"] = $fields["pricingTier"];
+  $hat["image"] = $image; 
   $hat["showOnCommissions"] = $fields["showOnCommissions"];
   setPriceBands($fields["pricingTier"], $hat);
   array_push($output, $hat);
@@ -82,9 +83,14 @@ getFields([
 ], $form);
 
 if($form["productType"]) {
+  if(isset($_FILES["pic"])) {
+    $image = savePicture($_FILES["pic"]);
+  } else {
+    $image = false;
+  }
   if($form["productType"] === "hat") {
     $jsonData = loadData();
-    createHat($form, $jsonData);
+    createHat($form, $image, $jsonData);
     saveData($jsonData);
   } elseif($form["productType"] === "commission") {
     $jsonDataCommissions = loadDataCommissions();
@@ -93,5 +99,6 @@ if($form["productType"]) {
   }
   $submitted = true;
 }
+
 
  ?>

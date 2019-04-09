@@ -15,7 +15,7 @@
       <img src="./Buttons/aabanner2.jpg" id="banner">
     </div>
 
-      <form method="post">
+      <form method="post" enctype="multipart/form-data">
         <fieldset class="adminFormOverallContainer">
           <div class="contactLegendContainer">
             <legend class="adminLegend">Add Item to Site</legend>
