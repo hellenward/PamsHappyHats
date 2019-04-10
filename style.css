@@ -311,7 +311,7 @@ input, select {
   margin-left: 100px;
 }
 
-fieldset {
+fieldset, .errorMessageBox {
   background-color: pink;
   opacity: 0.9;
 }
@@ -319,6 +319,8 @@ fieldset {
 .adminInput1 {
   min-width: 300px;
 }
+
+
 
 /*Media queries*/
 

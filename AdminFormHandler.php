@@ -21,7 +21,7 @@ function saveData($jsonData) {
 }
 
 function createHat($fields, $image, &$output) {
-  $error = validateHat($fields);
+  $error = validateHat($fields, $image);
   if ($error) {
     return $error;
   }
@@ -73,7 +73,10 @@ function setPriceBands($pricingTier, &$output) {
   }
 }
 
-function validateHat($hat) {
+function validateHat($hat, $image) {
+  if (!$image) {
+    return "Missing image";
+  }
   $fields = array("name", "pricingTier", "showOnCommissions");
   foreach($fields as $field) {
     if(!isset($hat[$field]) || $hat[$field] === "") {

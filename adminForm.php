@@ -87,9 +87,11 @@
         </div>
         </fieldset>
       </form>
-      <?php if (isset ($error)) {
-        echo $error;
-      } ?>
+      <?php if (isset ($error)) { ?>
+        <div class="errorMessageBox">
+          <?php echo "Item not uploaded. " . $error; ?>
+        </div>
+      <?php } ?>
 
       <script src="./js/script.js"></script>
 </body>
