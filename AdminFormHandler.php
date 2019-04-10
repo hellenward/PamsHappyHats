@@ -21,7 +21,7 @@ function saveData($jsonData) {
 }
 
 function createHat($fields, $image, &$output) {
-  $error = validateHat($fields, $image);
+  $error = validate($fields, $image, array("name", "pricingTier", "showOnCommissions"));
   if ($error) {
     return $error;
   }
@@ -35,14 +35,18 @@ function createHat($fields, $image, &$output) {
   array_push($output, $hat);
 }
 
-function createCommission($fields, &$output) {
-  $commission = array();
-  $commission["type"] = "commission";
-  $commission["name"] = $fields["name"];
-  $commission["pricingTier"] = $fields["pricingTier"];
-  $commission["showOnHats"] = $fields["showOnHats"];
-  $commission["showOnFigures"] = $fields["showOnFigures"];
-  array_push($commission, $output);
+function createFigure($fields, $image, &$output) {
+  $error =  validate($fields, $image, array("name", "showOnCommissions"));
+  if($error) {
+    return $error;
+  }
+  $figure = array();
+  $figure["type"] = "collectableFigure";
+  $figure["name"] = $fields["name"];
+  $figure["price"] = "£10.00";
+  $figure["image"] = $image;
+  $figure["showOnCommissions"] = $fields["showOnCommissions"];
+  array_push($output, $figure);
 }
 
 function setPriceBands($pricingTier, &$output) {
@@ -73,13 +77,12 @@ function setPriceBands($pricingTier, &$output) {
   }
 }
 
-function validateHat($hat, $image) {
+function validate($item, $image, $fields) {
   if (!$image) {
-    return "Missing image";
+    return "missing image.";
   }
-  $fields = array("name", "pricingTier", "showOnCommissions");
   foreach($fields as $field) {
-    if(!isset($hat[$field]) || $hat[$field] === "") {
+    if(!isset($item[$field]) || $item[$field] === "") {
       return "Missing " . $field;
     }
   }
@@ -104,16 +107,17 @@ if($form["productType"]) {
   } else {
     $image = false;
   }
+  $error = false;
+  $jsonData = loadData();
   if($form["productType"] === "hat") {
-    $jsonData = loadData();
     $error = createHat($form, $image, $jsonData);
-    saveData($jsonData);
-  } elseif($form["productType"] === "commission") {
-    $jsonDataCommissions = loadDataCommissions();
-    createCommission($form, $jsonDataCommissions);
-    saveDataCommissions($jsonDataCommissions);
+  } elseif ($form["productType"] === "figure") {
+    $error = createFigure($form, $image, $jsonData);
   }
   $submitted = true;
+  if(!$error) {
+    saveData($jsonData);
+  }
 }
 
  ?>
