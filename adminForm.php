@@ -70,7 +70,7 @@
         </div>
         <div class="adminEvent hidden adminReset">
           <label>Please enter event URL</label>
-          <input name="eventURL" type="text"></input>
+          <input name="url" type="text"></input>
         </div>
         <div class="adminEvent hidden adminReset">
           <label>Please enter start date and end date of event</label>
@@ -79,7 +79,7 @@
         </div>
         <div class="adminEvent hidden adminReset">
           <label>Please enter event address</label>
-          <input name="eventAddress" type="text"></input>
+          <input name="address" type="text"></input>
         </div>
 
         <div>

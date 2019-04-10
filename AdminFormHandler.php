@@ -49,6 +49,22 @@ function createFigure($fields, $image, &$output) {
   array_push($output, $figure);
 }
 
+function createEvent($fields, $image, &$output) {
+  $error = validate($fields, $image, array("name", "url", "startDate", "address"));
+  if($error) {
+    return $error;
+  }
+  $event = array();
+  $event["type"] = "event";
+  $event["name"] = $fields["name"];
+  $event["url"] = $fields["url"];
+  $event["startDate"] = $fields["startDate"];
+  $event["endDate"] = $fields["endDate"];
+  $event["address"] = $fields["address"];
+  $event["image"]  = $image;
+  array_push($output, $event);
+}
+
 function setPriceBands($pricingTier, &$output) {
   if ($pricingTier === "bronze") {
     $output["Premie"] = "£7.00";
@@ -94,11 +110,15 @@ $form = array();
 getFields([
   "productType",
   "name",
+  "url",
   "pic",
   "pricingTier",
   "showOnCommissions",
   "showOnHats",
-  "showOnFigures"
+  "showOnFigures",
+  "startDate",
+  "endDate",
+  "address"
 ], $form);
 
 if($form["productType"]) {
@@ -113,6 +133,8 @@ if($form["productType"]) {
     $error = createHat($form, $image, $jsonData);
   } elseif ($form["productType"] === "figure") {
     $error = createFigure($form, $image, $jsonData);
+  } elseif ($form["productType"] === "event") {
+    $error = createEvent($form, $image, $jsonData);
   }
   $submitted = true;
   if(!$error) {
