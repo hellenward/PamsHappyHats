@@ -21,7 +21,11 @@ include_once("functions.php");
 
     <?php $product = getProduct($_GET["id"]);
     if ($product) {
-      include ("purchaseHat.php");
+      if($product["type"] === "hat") {
+        include ("purchaseHat.php");
+      } else {
+        include ("purchaseFigure.php");
+      }
     } else {
       print "Not Found";
     }

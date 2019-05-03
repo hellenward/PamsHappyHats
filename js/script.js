@@ -56,9 +56,11 @@ const showEvents = (events) => {
 const showFigures = (figures) => {
   showItems(figures, ".figures", "figures", (item) => {
     $(".figures").append(`<div class="product hidden fade">
-      <img src="${item.image}">
-      <h4>${item.name}</h4>
-      <h4>${item.price}</h4>
+      <a href="./purchase.php?id=${item.id}">
+        <img src="${item.image}">
+        <h4>${item.name}</h4>
+        <h4>${item.price}</h4>
+      </a>
     </div>`);
   });
 };
