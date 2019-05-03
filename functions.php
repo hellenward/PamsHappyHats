@@ -28,4 +28,13 @@ function guidv4($data)
     return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
 
+function getProduct($id) {
+  $data = loadData();
+  foreach ($data as $item) {
+    if ($item["id"] === $id) {
+      return $item;
+    }
+  }
+}
+
 ?>
