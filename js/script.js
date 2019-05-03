@@ -25,15 +25,17 @@ const getPrice = (product) => {
       return product[tier];
     }
   }
-  return "unknown"; 
+  return "unknown";
 }
 
 const showProducts = (products) => {
   showItems(products, ".products", "products", (item) => {
     $(".products").append(`<div class="product hidden fade">
-      <img src="${item.image}">
-      <h4>${item.name}</h4>
-      <h4>From ${getPrice(item)}</h4>
+      <a href="#">
+        <img src="${item.image}">
+        <h4>${item.name}</h4>
+        <h4>From ${getPrice(item)}</h4>
+      </a>
     </div>`);
   });
 }

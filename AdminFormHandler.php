@@ -26,6 +26,7 @@ function createHat($fields, $image, &$output) {
     return $error;
   }
   $hat = array();
+  setId($hat);
   $hat["type"] = "hat";
   $hat["name"] = $fields["name"];
   $hat["pricingTier"] = $fields["pricingTier"];
@@ -41,6 +42,7 @@ function createFigure($fields, $image, &$output) {
     return $error;
   }
   $figure = array();
+  setId($figure);
   $figure["type"] = "collectableFigure";
   $figure["name"] = $fields["name"];
   $figure["price"] = "£10.00";
@@ -55,6 +57,7 @@ function createEvent($fields, $image, &$output) {
     return $error;
   }
   $event = array();
+  setId($event);
   $event["type"] = "event";
   $event["name"] = $fields["name"];
   $event["url"] = $fields["url"];

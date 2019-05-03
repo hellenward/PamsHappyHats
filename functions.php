@@ -8,8 +8,13 @@ function loadData() {
 function savePicture($source) {
   $destination = "./Thumbs/" . $source["name"];
   if (move_uploaded_file($source["tmp_name"], $destination)) {
-    return $destination; 
+    return $destination;
   }
   return false;
+}
+
+function setId(&$object) {
+  $id = exec("uuid");
+  $object["id"] = $id;
 }
 ?>

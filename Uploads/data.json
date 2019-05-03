@@ -11,7 +11,8 @@
         "Small": "\u00a310.00",
         "Medium": "\u00a311.00",
         "Large": "12.00",
-        "Extra Large": "\u00a313.00"
+        "Extra Large": "\u00a313.00",
+        "id": "98a6f237-582e-4ba1-ac91-680867a8831a"
     },
     {
         "type": "hat",
@@ -25,7 +26,8 @@
         "Small": "\u00a310.00",
         "Medium": "\u00a311.00",
         "Large": "12.00",
-        "Extra Large": "\u00a313.00"
+        "Extra Large": "\u00a313.00",
+        "id": "13c3b914-e049-4cb9-9868-37db8f0be9c4"
     },
     {
         "type": "hat",
@@ -39,7 +41,8 @@
         "Small": "\u00a310.00",
         "Medium": "\u00a311.00",
         "Large": "12.00",
-        "Extra Large": "\u00a313.00"
+        "Extra Large": "\u00a313.00",
+        "id": "7e057f3f-0298-431f-b0a9-3d3ee45b659d"
     },
     {
         "type": "hat",
@@ -53,7 +56,8 @@
         "Small": "\u00a310.00",
         "Medium": "\u00a311.00",
         "Large": "12.00",
-        "Extra Large": "\u00a313.00"
+        "Extra Large": "\u00a313.00",
+        "id": "6fefb5a4-952d-4532-abe3-c9126a7b5b01"
     },
     {
         "type": "hat",
@@ -67,7 +71,8 @@
         "Small": "\u00a310.00",
         "Medium": "\u00a311.00",
         "Large": "12.00",
-        "Extra Large": "\u00a313.00"
+        "Extra Large": "\u00a313.00",
+        "id": "7b1e6e2b-dafa-4895-936f-607ca0548dd1"
     },
     {
         "type": "hat",
@@ -81,7 +86,8 @@
         "Small": "\u00a311.00",
         "Medium": "\u00a312.00",
         "Large": "13.00",
-        "Extra Large": "\u00a314.00"
+        "Extra Large": "\u00a314.00",
+        "id": "b7b727ee-a3aa-48c2-8b40-62b410100094"
     },
     {
         "type": "hat",
@@ -95,7 +101,8 @@
         "Small": "\u00a311.00",
         "Medium": "\u00a312.00",
         "Large": "13.00",
-        "Extra Large": "\u00a314.00"
+        "Extra Large": "\u00a314.00",
+        "id": "49e39332-4bd0-44d3-9547-decf7f77ab1c"
     },
     {
         "type": "hat",
@@ -109,7 +116,8 @@
         "Small": "\u00a311.00",
         "Medium": "\u00a312.00",
         "Large": "13.00",
-        "Extra Large": "\u00a314.00"
+        "Extra Large": "\u00a314.00",
+        "id": "fe72bf8f-c15c-4ed2-b0ed-4809154e0321"
     },
     {
         "type": "hat",
@@ -122,7 +130,8 @@
         "Small": "\u00a312.00",
         "Medium": "\u00a313.00",
         "Large": "\u00a314.00",
-        "Extra Large": "\u00a315.00"
+        "Extra Large": "\u00a315.00",
+        "id": "dd236831-cd50-461f-bd08-12b9c0be09d7"
     },
     {
         "type": "event",
@@ -131,7 +140,8 @@
         "startDate": "2019-03-30",
         "endDate": "2019-03-31",
         "address": "ExCel London, Royal Victoria Dock, 1 Western Gateway, Royal Docks, London E16 2XL",
-        "image": "ContactGraphics\/WalkerStalker.png"
+        "image": "ContactGraphics\/WalkerStalker.png",
+        "id": "7f1394aa-3e57-4712-a97b-d176f4021bb8"
     },
     {
         "type": "event",
@@ -140,7 +150,8 @@
         "startDate": "2019-04-06",
         "endDate": "2019-04-06",
         "address": "Allum Manor House & Hall, 2 Allum Lane, Borehamwood WD6 3PJ",
-        "image": "ContactGraphics\/Elstree-Con.png"
+        "image": "ContactGraphics\/Elstree-Con.png",
+        "id": "d1aa935f-2b15-4f49-bd6a-bcc1c806744c"
     },
     {
         "type": "event",
@@ -149,7 +160,8 @@
         "startDate": "2019-04-13",
         "endDate": "2019-04-13",
         "address": "The Theatre, University of Bedfordshire, Polhill Avenue, Bedford MK41 9EA",
-        "image": "ContactGraphics\/BedfordWho.jpg"
+        "image": "ContactGraphics\/BedfordWho.jpg",
+        "id": "b1195ee4-be49-464e-8108-405be420c10d"
     },
     {
         "type": "event",
@@ -158,109 +170,81 @@
         "startDate": "2019-04-28",
         "endDate": "2019-04-28",
         "address": "Abingdon & Whitney College, Abingdon Campus, Wootton Road, Abingdon OX14 1GG",
-        "image": "ContactGraphics\/ThamesCon.png"
+        "image": "ContactGraphics\/ThamesCon.png",
+        "id": "7586ff00-dd08-45c3-bd5a-9fc1da86b4a6"
     },
     {
         "type": "collectableFigure",
         "name": "13th Doctor - Whittaker",
         "price": "\u00a310.00",
-        "image": ".\/Thumbs\/HH263 D2 12 Whittaker.jpg"
+        "image": ".\/Thumbs\/HH263 D2 12 Whittaker.jpg",
+        "id": "a7f61912-a253-46b7-8939-95617ebd4008"
     },
     {
         "type": "collectableFigure",
         "name": "Pting Figure",
         "price": "\u00a310.00",
-        "image": ".\/Thumbs\/HH306 Pting.jpg"
+        "image": ".\/Thumbs\/HH306 Pting.jpg",
+        "id": "1851cc01-d00f-4555-a680-e850a130f991"
     },
     {
         "type": "collectableFigure",
         "name": "12th Doctor - Capaldi",
         "price": "\u00a310.00",
-        "image": ".\/Thumbs\/HH262 Dr Capaldi.jpg"
+        "image": ".\/Thumbs\/HH262 Dr Capaldi.jpg",
+        "id": "2fe5177c-d3e6-4aed-8a17-b80c2fa3c43b"
     },
     {
         "type": "collectableFigure",
         "name": "The Valeyard",
         "price": "\u00a310.00",
-        "image": ".\/Thumbs\/HH298 The Valeyard.jpg"
+        "image": ".\/Thumbs\/HH298 The Valeyard.jpg",
+        "id": "789da429-faf8-43b9-87ed-97d04d764541"
     },
     {
         "type": "collectableFigure",
         "name": "Mollari",
         "price": "\u00a310.00",
-        "image": ".\/Thumbs\/HH305 Mollari.jpg"
+        "image": ".\/Thumbs\/HH305 Mollari.jpg",
+        "id": "0b71022a-73de-48da-bc35-b5fe7931e41b"
     },
     {
         "type": "hat",
         "name": "Blue Animal",
         "price": "From \u00a37.00",
-        "image": "Thumbs\/Commissions\/animalblue.jpg"
+        "image": "Thumbs\/Commissions\/animalblue.jpg",
+        "id": "f5e6c009-4413-41de-b104-7cfd0adfdb0a"
     },
     {
         "type": "hat",
         "isCommission": true,
         "name": "Blue Octopus",
         "price": "From \u00a37.00",
-        "image": "Thumbs\/Commissions\/blue octo.jpg"
+        "image": "Thumbs\/Commissions\/blue octo.jpg",
+        "id": "f75115df-8c21-4039-b5c4-f282d60e65c3"
     },
     {
         "type": "hat",
         "isCommission": true,
         "name": "Facehugger",
         "price": "From \u00a37.00",
-        "image": "Thumbs\/Commissions\/Facehugger2.jpg"
+        "image": "Thumbs\/Commissions\/Facehugger2.jpg",
+        "id": "a1233d99-bd94-47de-9952-6902541538ad"
     },
     {
         "type": "hat",
         "isCommission": true,
         "name": "Dog Rastafarian Hat",
         "price": "From \u00a37.00",
-        "image": "Thumbs\/Commissions\/Dog Hat Rasta.jpg"
+        "image": "Thumbs\/Commissions\/Dog Hat Rasta.jpg",
+        "id": "01062b4f-5859-4f2e-bb51-4dcf4795452a"
     },
     {
         "type": "collectableFigure",
         "isCommission": true,
         "name": "Pink Dalek",
         "price": "From \u00a37.00",
-        "image": "Thumbs\/Commissions\/Pink Dalek.jpg"
-    },
-    {
-        "type": "hat",
-        "name": "Test Commission",
-        "pricingTier": "platinum",
-        "showOnCommissions": "yes"
-    },
-    {
-        "type": "hat",
-        "name": "Test The Hat",
-        "pricingTier": "silver",
-        "showOnCommissions": "yes"
-    },
-    {
-        "type": "hat",
-        "name": "Tony's hat",
-        "pricingTier": "silver",
-        "showOnCommissions": "yes",
-        "premie": "\u00a38.00",
-        "newborn": "\u00a39.00",
-        "extraSmall": "\u00a310.00",
-        "small": "\u00a311.00",
-        "medium": "\u00a312.00",
-        "large": "\u00a313.00",
-        "extraLarge": "\u00a314.00"
-    },
-    {
-        "type": "hat",
-        "name": "Bob the Hat",
-        "pricingTier": "gold",
-        "image": ".\/Thumbs\/36490158_10156450831314134_9170376654432763904_n.jpg",
-        "showOnCommissions": "yes",
-        "Premie": "\u00a39.00",
-        "Newborn": "\u00a310.00",
-        "Extra Small": "\u00a311.00",
-        "Small": "\u00a312.00",
-        "Medium": "\u00a313.00",
-        "Large": "\u00a314.00",
-        "Extra Large": "\u00a315.00"
+        "image": "Thumbs\/Commissions\/Pink Dalek.jpg",
+        "id": "690b8a72-b3f7-4f2f-9d7e-fe73e0933e11"
     }
 ]
