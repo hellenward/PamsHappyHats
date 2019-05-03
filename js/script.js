@@ -31,7 +31,7 @@ const getPrice = (product) => {
 const showProducts = (products) => {
   showItems(products, ".products", "products", (item) => {
     $(".products").append(`<div class="product hidden fade">
-      <a href="#">
+      <a href="./purchase.php?id=${item.id}">
         <img src="${item.image}">
         <h4>${item.name}</h4>
         <h4>From ${getPrice(item)}</h4>
